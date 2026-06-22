@@ -1,0 +1,1176 @@
+2026-06-21 18:40:43 [INFO]: Gemini API service initialized 
+2026-06-21 18:43:36 [INFO]: Gemini API service initialized 
+2026-06-21 18:43:36 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:43:36 [INFO]: Gemini API service initialized 
+2026-06-21 18:43:37 [INFO]: MongoDB connected successfully 
+2026-06-21 18:43:37 [INFO]: Gemini API service initialized 
+2026-06-21 18:44:57 [INFO]: Gemini API service initialized 
+2026-06-21 18:46:54 [INFO]: Gemini API service initialized 
+2026-06-21 18:46:54 [INFO]: Gemini API service initialized 
+2026-06-21 18:46:54 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:46:54 [INFO]: MongoDB connected successfully 
+2026-06-21 18:46:54 [INFO]: Gemini API service initialized 
+2026-06-21 18:46:54 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:46:54 [INFO]: MongoDB connected successfully 
+2026-06-21 18:49:02 [INFO]: Gemini API service initialized 
+2026-06-21 18:49:02 [INFO]: Gemini API service initialized 
+2026-06-21 18:49:02 [INFO]: Gemini API service initialized 
+2026-06-21 18:49:02 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:49:02 [INFO]: MongoDB connected successfully 
+2026-06-21 18:49:02 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:49:02 [INFO]: MongoDB connected successfully 
+2026-06-21 18:49:02 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 18:49:02 [INFO]: MongoDB connected successfully 
+2026-06-21 19:06:01 [INFO]: Gemini API service initialized 
+2026-06-21 19:06:01 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 19:06:01 [INFO]: MongoDB connected successfully 
+2026-06-21 19:06:02 [INFO]: Gemini API service initialized 
+2026-06-21 19:06:02 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 19:06:02 [INFO]: MongoDB connected successfully 
+2026-06-21 19:06:02 [INFO]: Gemini API service initialized 
+2026-06-21 19:06:02 [WARN]: MONGODB_URI contains placeholder values; using local MongoDB fallback. {"placeholderUri":"mongodb+srv://<username>:<password>@cluster.mongodb.net/travelwave?retryWrites=true&w=majority","fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 19:06:02 [INFO]: MongoDB connected successfully 
+2026-06-21 19:38:02 [INFO]: Gemini API service initialized 
+2026-06-21 19:38:02 [WARN]: MONGODB_URI not set; defaulting to local MongoDB URI. {"fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 19:38:02 [INFO]: MongoDB connected successfully 
+2026-06-21 19:46:28 [INFO]: Gemini API service initialized 
+2026-06-21 19:46:29 [INFO]: MongoDB connected successfully 
+2026-06-21 19:47:01 [INFO]: Gemini API service initialized 
+2026-06-21 19:47:01 [INFO]: MongoDB connected successfully 
+2026-06-21 19:48:14 [INFO]: Gemini API service initialized 
+2026-06-21 19:48:14 [INFO]: MongoDB connected successfully 
+2026-06-21 19:49:51 [ERROR]: Error occurred: {"error":"schema.parseAsync is not a function","stack":"TypeError: schema.parseAsync is not a function\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:8:42\n    at Layer.handle [as handle_request] (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\rateLimiter.ts:35:7\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-21 19:49:51 [INFO]: POST /api/auth/register 500 - 14ms 
+2026-06-21 19:51:04 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:05 [INFO]: MongoDB connected successfully 
+2026-06-21 19:51:06 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:07 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:07 [INFO]: MongoDB connected successfully 
+2026-06-21 19:51:08 [INFO]: MongoDB connected successfully 
+2026-06-21 19:51:08 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:08 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:09 [INFO]: MongoDB connected successfully 
+2026-06-21 19:51:09 [INFO]: MongoDB connected successfully 
+2026-06-21 19:51:13 [INFO]: Gemini API service initialized 
+2026-06-21 19:51:15 [INFO]: MongoDB connected successfully 
+2026-06-21 19:52:08 [INFO]: Gemini API service initialized 
+2026-06-21 19:52:09 [INFO]: MongoDB connected successfully 
+2026-06-21 19:54:48 [ERROR]: Registration error: (0 , auth_validator_1.validateRegistration) is not a function {"stack":"TypeError: (0 , auth_validator_1.validateRegistration) is not a function\n    at register (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:31:52)\n    at Layer.handle [as handle_request] (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:10:7\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-21 19:55:09 [INFO]: Gemini API service initialized 
+2026-06-21 19:55:11 [INFO]: MongoDB connected successfully 
+2026-06-21 19:55:14 [INFO]: Gemini API service initialized 
+2026-06-21 19:55:14 [INFO]: MongoDB connected successfully 
+2026-06-21 19:55:20 [INFO]: Gemini API service initialized 
+2026-06-21 19:55:20 [INFO]: MongoDB connected successfully 
+2026-06-21 19:55:28 [INFO]: Gemini API service initialized 
+2026-06-21 19:55:29 [INFO]: MongoDB connected successfully 
+2026-06-21 19:55:34 [INFO]: User registered: testuser@example.com, verification token: fd97c62045a8a2ea61e74831f63c4a5058c473eae0cd05c9e49995c7b8ff334c 
+2026-06-21 19:55:34 [INFO]: POST /api/auth/register 201 - 450ms 
+2026-06-21 19:56:38 [INFO]: User registered: venky@gmail.com, verification token: 1be04cb15a40affb6d579dc9e8258eeb0e59dd7968d1353a016c559dd4b5e8ea 
+2026-06-21 19:56:38 [INFO]: POST /api/auth/register 201 - 405ms 
+2026-06-21 19:57:48 [INFO]: Gemini API service initialized 
+2026-06-21 19:57:50 [INFO]: MongoDB connected successfully 
+2026-06-21 20:00:42 [ERROR]: Error occurred: {"error":"schema.parseAsync is not a function","stack":"TypeError: schema.parseAsync is not a function\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:8:42\n    at Layer.handle [as handle_request] (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\rateLimiter.ts:35:7","path":"/api/trips/generate","method":"POST","ip":"::1"}
+2026-06-21 20:09:54 [INFO]: Gemini API service initialized 
+2026-06-21 20:09:54 [INFO]: MongoDB connected successfully 
+2026-06-21 20:10:25 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:92:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-21 20:11:25 [INFO]: Gemini API service initialized 
+2026-06-21 20:11:25 [INFO]: MongoDB connected successfully 
+2026-06-21 20:11:57 [INFO]: POST /api/auth/login 200 - 439ms 
+2026-06-21 20:12:24 [ERROR]: Error occurred: {"error":"schema.parseAsync is not a function","stack":"TypeError: schema.parseAsync is not a function\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:8:42\n    at Layer.handle [as handle_request] (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\rateLimiter.ts:35:7","path":"/api/trips/generate","method":"POST","ip":"::1"}
+2026-06-21 20:14:27 [INFO]: Gemini API service initialized 
+2026-06-21 20:14:27 [INFO]: Gemini API service initialized 
+2026-06-21 20:14:27 [INFO]: MongoDB connected successfully 
+2026-06-21 20:14:27 [INFO]: MongoDB connected successfully 
+2026-06-21 20:15:35 [INFO]: Gemini API service initialized 
+2026-06-21 20:15:35 [INFO]: Gemini API service initialized 
+2026-06-21 20:15:35 [INFO]: MongoDB connected successfully 
+2026-06-21 20:15:35 [INFO]: MongoDB connected successfully 
+2026-06-21 20:15:43 [INFO]: Gemini API service initialized 
+2026-06-21 20:15:43 [INFO]: Gemini API service initialized 
+2026-06-21 20:15:43 [INFO]: MongoDB connected successfully 
+2026-06-21 20:15:44 [INFO]: MongoDB connected successfully 
+2026-06-21 20:17:44 [INFO]: Gemini API service initialized 
+2026-06-21 20:17:44 [INFO]: Gemini API service initialized 
+2026-06-21 20:17:45 [INFO]: MongoDB connected successfully 
+2026-06-21 20:17:45 [INFO]: MongoDB connected successfully 
+2026-06-21 20:18:48 [INFO]: Gemini API service initialized 
+2026-06-21 20:18:48 [INFO]: Gemini API service initialized 
+2026-06-21 20:18:49 [INFO]: MongoDB connected successfully 
+2026-06-21 20:18:50 [INFO]: MongoDB connected successfully 
+2026-06-21 20:20:15 [INFO]: Gemini API service initialized 
+2026-06-21 20:20:16 [INFO]: MongoDB connected successfully 
+2026-06-21 20:21:38 [INFO]: Gemini API service initialized 
+2026-06-21 20:21:39 [INFO]: MongoDB connected successfully 
+2026-06-21 20:22:14 [INFO]: POST /api/auth/refresh-token 200 - 64ms 
+2026-06-21 20:23:46 [INFO]: Gemini API service initialized 
+2026-06-21 20:23:46 [INFO]: Gemini API service initialized 
+2026-06-21 20:23:47 [INFO]: MongoDB connected successfully 
+2026-06-21 20:23:47 [INFO]: Gemini API service initialized 
+2026-06-21 20:23:47 [INFO]: MongoDB connected successfully 
+2026-06-21 20:23:47 [INFO]: Gemini API service initialized 
+2026-06-21 20:23:47 [INFO]: MongoDB connected successfully 
+2026-06-21 20:23:48 [INFO]: MongoDB connected successfully 
+2026-06-21 20:24:20 [INFO]: Gemini API service initialized 
+2026-06-21 20:24:21 [INFO]: MongoDB connected successfully 
+2026-06-21 20:24:39 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 20:24:39 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 20:24:40 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.","retries":5}
+2026-06-21 20:25:44 [INFO]: Gemini API service initialized 
+2026-06-21 20:25:45 [INFO]: MongoDB connected successfully 
+2026-06-21 20:31:38 [INFO]: POST /api/trips/generate 401 - 14ms 
+2026-06-21 20:31:38 [INFO]: POST /api/auth/refresh-token 200 - 64ms 
+2026-06-21 20:31:38 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 20:31:38 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 20:31:39 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.","retries":5}
+2026-06-21 21:01:32 [INFO]: Gemini API service initialized 
+2026-06-21 21:01:32 [INFO]: MongoDB connected successfully 
+2026-06-21 21:01:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:01:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:01:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:01:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:01:34 [INFO]: MongoDB connected successfully 
+2026-06-21 21:01:34 [INFO]: MongoDB connected successfully 
+2026-06-21 21:01:34 [INFO]: MongoDB connected successfully 
+2026-06-21 21:01:34 [INFO]: MongoDB connected successfully 
+2026-06-21 21:12:47 [INFO]: Gemini API service initialized 
+2026-06-21 21:12:48 [INFO]: MongoDB connected successfully 
+2026-06-21 21:13:10 [INFO]: POST /api/trips/generate 401 - 13ms 
+2026-06-21 21:13:10 [INFO]: POST /api/auth/refresh-token 200 - 54ms 
+2026-06-21 21:13:10 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 21:13:10 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:13:11 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.","retries":5}
+2026-06-21 21:19:06 [INFO]: Gemini API service initialized 
+2026-06-21 21:19:08 [INFO]: MongoDB connected successfully 
+2026-06-21 21:19:43 [INFO]: Gemini API service initialized 
+2026-06-21 21:19:45 [INFO]: MongoDB connected successfully 
+2026-06-21 21:21:17 [INFO]: Gemini API service initialized 
+2026-06-21 21:22:07 [ERROR]: Failed to connect to MongoDB: querySrv ETIMEOUT _mongodb._tcp.cluster0.jk8hvmf.mongodb.net {"code":"ETIMEOUT","syscall":"querySrv","hostname":"_mongodb._tcp.cluster0.jk8hvmf.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.jk8hvmf.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)"}
+2026-06-21 21:22:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:22:33 [INFO]: Gemini API service initialized 
+2026-06-21 21:22:35 [INFO]: MongoDB connected successfully 
+2026-06-21 21:22:44 [INFO]: Gemini API service initialized 
+2026-06-21 21:22:44 [INFO]: Gemini API service initialized 
+2026-06-21 21:22:44 [INFO]: MongoDB connected successfully 
+2026-06-21 21:23:30 [WARN]: Configured MongoDB connection failed; trying local MongoDB fallback. {"fallbackUri":"mongodb://127.0.0.1:27017/travelwave"}
+2026-06-21 21:23:30 [INFO]: MongoDB connected successfully 
+2026-06-21 21:24:18 [INFO]: GET /health 200 - 7ms 
+2026-06-21 21:25:17 [INFO]: GET /health 200 - 1ms 
+2026-06-21 21:25:39 [INFO]: User registered: codex-smoke-1782057339@example.com, verification token: c7ea25a042ae8692f188357515654a3d79f0448fc453861019b743dfb48d9795 
+2026-06-21 21:25:39 [INFO]: POST /api/auth/register 201 - 450ms 
+2026-06-21 21:25:39 [INFO]: Generating trip for user 6a38097b8ec95c3add874e5b to Delhi 
+2026-06-21 21:25:39 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:25:40 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.","retries":5}
+2026-06-21 21:25:40 [ERROR]: Failed to generate trip plan: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods. {"status":404,"statusText":"Not Found","stack":"Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.\n    at handleResponseNotOk (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\@google\\generative-ai\\dist\\index.js:414:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at makeRequest (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\@google\\generative-ai\\dist\\index.js:387:9)\n    at generateContent (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\@google\\generative-ai\\dist\\index.js:832:22)\n    at GeminiService.fetchWithRetry (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:75:22)\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:115:24)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)"}
+2026-06-21 21:25:40 [ERROR]: Trip generation error: Failed to generate trip plan. Please try again. {"statusCode":500,"isOperational":true,"stack":"Error: Failed to generate trip plan. Please try again.\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:119:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)"}
+2026-06-21 21:25:40 [ERROR]: Error occurred: {"error":"Failed to generate trip plan. Please try again.","stack":"Error: Failed to generate trip plan. Please try again.\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:119:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)","path":"/api/trips/generate","method":"POST","ip":"::1"}
+2026-06-21 21:25:40 [INFO]: POST /api/trips/generate 500 - 373ms 
+2026-06-21 21:25:49 [INFO]: GET /health 200 - 13ms 
+2026-06-21 21:26:11 [INFO]: Gemini API service initialized 
+2026-06-21 21:26:12 [INFO]: MongoDB connected successfully 
+2026-06-21 21:26:20 [INFO]: GET /health 200 - 7ms 
+2026-06-21 21:26:29 [INFO]: User registered: codex-smoke-1782057388@example.com, verification token: 11cd132f829f34a10cba0524251da5d993fa98856995b8c592d7c8d439673091 
+2026-06-21 21:26:29 [INFO]: POST /api/auth/register 201 - 429ms 
+2026-06-21 21:26:29 [INFO]: Generating trip for user 6a3809ac67d58072ac1fbd56 to Delhi 
+2026-06-21 21:26:29 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:26:51 [ERROR]: Failed to parse AI response: {"text":"{\n  \"itinerary\": [\n    {\n      \"dayNumber\": 1,\n      \"title\": \"Delhi's Culinary & Heritage Trail\",\n      \"activities\": [\n        {\n          \"title\": \"Old Delhi Food Walk: Breakfast & Chandni Chowk Exploration\",\n          \"description\": \"Start your day with an authentic breakfast of stuffed parathas at the legendary Parathe Wali Gali. Afterwards, immerse yourself in the chaotic yet charming lanes of Chandni Chowk, one of India's oldest and busiest markets. Experience the vibrant atmosphere, browse local shops, and soak in the historical surroundings.\",\n          \"estimatedCostINR\": 250,\n          \"timeOfDay\": \"Morning\",\n          \"location\": \"Parathe Wali Gali & Chandni Chowk, Old Delhi\",\n          \"duration\": \"2.5 hours\"\n        },\n        {\n          \"title\": \"Jama Masjid & Khari Baoli Spice Market\",\n          \"description\": \"Visit Jama Masjid, India's largest mosque, a magnificent example of Mughal architecture. Climb its minaret for panoramic views of Old Delhi (optional, small fee for entry to minaret). Then, take a short walk to Khari Baoli, Asia's largest wholesale spice market, for a sensory overload of aromas, colors, and sounds.\",\n          \"estimatedCostINR\": 100,\n          \"timeOfDay\": \"Morning\",\n          \"location\": \"Jama Masjid & Khari Baoli, Old Delhi\",\n          \"duration\": \"2 hours\"\n        },\n        {\n          \"title\": \"Authentic Mughlai Lunch at Karim's or Al Jawahar\",\n          \"description\": \"Indulge in a quintessential Mughlai lunch at one of Old","error":{}}
+2026-06-21 21:26:51 [ERROR]: Gemini API error: {"error":"Invalid response format from AI service","retries":5}
+2026-06-21 21:26:51 [ERROR]: Failed to generate trip plan: Invalid response format from AI service {"statusCode":500,"isOperational":true,"stack":"Error: Invalid response format from AI service\n    at GeminiService.fetchWithRetry (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:89:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:115:24)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)"}
+2026-06-21 21:26:51 [ERROR]: Trip generation error: Failed to generate trip plan. Please try again. {"statusCode":500,"isOperational":true,"stack":"Error: Failed to generate trip plan. Please try again.\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:119:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)"}
+2026-06-21 21:26:51 [ERROR]: Error occurred: {"error":"Failed to generate trip plan. Please try again.","stack":"Error: Failed to generate trip plan. Please try again.\n    at GeminiService.generateTripPlan (C:\\Desktop\\TravelWave\\server\\src\\services\\gemini.service.ts:119:13)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at generateTrip (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:31:26)","path":"/api/trips/generate","method":"POST","ip":"::1"}
+2026-06-21 21:26:51 [INFO]: POST /api/trips/generate 500 - 21782ms 
+2026-06-21 21:27:13 [INFO]: Gemini API service initialized 
+2026-06-21 21:27:15 [INFO]: MongoDB connected successfully 
+2026-06-21 21:27:24 [INFO]: User registered: codex-smoke-1782057443@example.com, verification token: 7aacbef1849b968f02c26756b8afaeb3d1864c921450bd870d13591b5e46bebd 
+2026-06-21 21:27:24 [INFO]: POST /api/auth/register 201 - 565ms 
+2026-06-21 21:27:24 [INFO]: Generating trip for user 6a3809e344044eba27918484 to Delhi 
+2026-06-21 21:27:24 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:27:49 [INFO]: POST /api/trips/generate 201 - 24873ms 
+2026-06-21 21:32:52 [INFO]: GET /api/auth/me 401 - 5ms 
+2026-06-21 21:32:52 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-21 21:32:52 [INFO]: POST /api/auth/refresh-token 200 - 38ms 
+2026-06-21 21:32:53 [INFO]: GET /api/auth/me 200 - 4ms 
+2026-06-21 21:32:53 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 21:33:19 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 21:33:19 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:33:27 [INFO]: GET /api/auth/me 304 - 8ms 
+2026-06-21 21:33:27 [INFO]: GET /api/auth/me 304 - 12ms 
+2026-06-21 21:33:42 [INFO]: Gemini API service initialized 
+2026-06-21 21:33:43 [INFO]: MongoDB connected successfully 
+2026-06-21 21:34:00 [INFO]: GET /api/auth/me 304 - 29ms 
+2026-06-21 21:34:00 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 21:34:07 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 21:34:07 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:34:35 [ERROR]: Trip generation error: Trip validation failed: itinerary.0.activities.1.timeOfDay: `Late Morning` is not a valid enum value for path `timeOfDay`., itinerary.1.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`., itinerary.2.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`. {"errors":{"itinerary.0.activities.1.timeOfDay":{"name":"ValidatorError","message":"`Late Morning` is not a valid enum value for path `timeOfDay`.","properties":{"message":"`Late Morning` is not a valid enum value for path `timeOfDay`.","type":"enum","enumValues":["Morning","Afternoon","Evening"],"path":"timeOfDay","value":"Late Morning","length":12},"kind":"enum","path":"timeOfDay","value":"Late Morning"},"itinerary.1.activities.2.timeOfDay":{"name":"ValidatorError","message":"`Late Afternoon` is not a valid enum value for path `timeOfDay`.","properties":{"message":"`Late Afternoon` is not a valid enum value for path `timeOfDay`.","type":"enum","enumValues":["Morning","Afternoon","Evening"],"path":"timeOfDay","value":"Late Afternoon","length":14},"kind":"enum","path":"timeOfDay","value":"Late Afternoon"},"itinerary.2.activities.2.timeOfDay":{"name":"ValidatorError","message":"`Late Afternoon` is not a valid enum value for path `timeOfDay`.","properties":{"message":"`Late Afternoon` is not a valid enum value for path `timeOfDay`.","type":"enum","enumValues":["Morning","Afternoon","Evening"],"path":"timeOfDay","value":"Late Afternoon","length":14},"kind":"enum","path":"timeOfDay","value":"Late Afternoon"}},"_message":"Trip validation failed","stack":"ValidationError: Trip validation failed: itinerary.0.activities.1.timeOfDay: `Late Morning` is not a valid enum value for path `timeOfDay`., itinerary.1.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`., itinerary.2.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`.\n    at model.Document.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\schemaType.js:1443:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)"}
+2026-06-21 21:34:35 [ERROR]: Error occurred: {"error":"Trip validation failed: itinerary.0.activities.1.timeOfDay: `Late Morning` is not a valid enum value for path `timeOfDay`., itinerary.1.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`., itinerary.2.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`.","stack":"ValidationError: Trip validation failed: itinerary.0.activities.1.timeOfDay: `Late Morning` is not a valid enum value for path `timeOfDay`., itinerary.1.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`., itinerary.2.activities.2.timeOfDay: `Late Afternoon` is not a valid enum value for path `timeOfDay`.\n    at model.Document.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\schemaType.js:1443:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)","path":"/api/trips/generate","method":"POST","ip":"::1"}
+2026-06-21 21:34:35 [INFO]: POST /api/trips/generate 400 - 27968ms 
+2026-06-21 21:35:36 [INFO]: Gemini API service initialized 
+2026-06-21 21:35:37 [INFO]: MongoDB connected successfully 
+2026-06-21 21:35:53 [INFO]: User registered: codex-smoke-1782057952@example.com, verification token: f348f4b0b27900d0da77c6fef85089b33188957046803ce7da71f71f23ae6378 
+2026-06-21 21:35:53 [INFO]: POST /api/auth/register 201 - 449ms 
+2026-06-21 21:35:53 [INFO]: Generating trip for user 6a380be0de418fc5d37803f9 to Delhi 
+2026-06-21 21:35:53 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:36:11 [INFO]: POST /api/trips/generate 201 - 18414ms 
+2026-06-21 21:37:14 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Delhi 
+2026-06-21 21:37:14 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:37:36 [INFO]: POST /api/trips/generate 201 - 21974ms 
+2026-06-21 21:37:36 [INFO]: GET /api/trips/6a380c48de418fc5d378041c 200 - 123ms 
+2026-06-21 21:37:36 [INFO]: GET /api/trips/6a380c48de418fc5d378041c 200 - 79ms 
+2026-06-21 21:39:43 [INFO]: GET /api/trips 200 - 51ms 
+2026-06-21 21:39:43 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 21:40:23 [INFO]: GET /api/auth/me 304 - 6ms 
+2026-06-21 21:40:23 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 21:40:23 [INFO]: GET /api/trips 200 - 32ms 
+2026-06-21 21:40:23 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 21:45:44 [INFO]: User registered: sky@gmail.com, verification token: 82f1f08210266c5c0b6672eb3e654574c7d42b170f51a6a8c9c3c9e044eba07f 
+2026-06-21 21:45:44 [INFO]: POST /api/auth/register 201 - 426ms 
+2026-06-21 21:45:44 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 21:45:44 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 21:47:05 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 21:47:05 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 21:47:19 [INFO]: Generating trip for user 6a380e30de418fc5d37804ae to Delhi 
+2026-06-21 21:47:19 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:47:48 [INFO]: POST /api/trips/generate 201 - 29089ms 
+2026-06-21 21:47:48 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 76ms 
+2026-06-21 21:47:49 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 99ms 
+2026-06-21 21:48:54 [INFO]: GET /api/trips 200 - 40ms 
+2026-06-21 21:48:54 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 21:48:58 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 75ms 
+2026-06-21 21:48:58 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 68ms 
+2026-06-21 21:49:26 [INFO]: DELETE /api/trips/6a380eacde418fc5d37804b9/activities 200 - 84ms 
+2026-06-21 21:55:08 [INFO]: GET /api/trips 200 - 35ms 
+2026-06-21 21:55:08 [INFO]: GET /api/trips 304 - 169ms 
+2026-06-21 21:55:39 [INFO]: Generating trip for user 6a380e30de418fc5d37804ae to Delhi 
+2026-06-21 21:55:39 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 21:55:46 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-21 21:55:46 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 21:55:49 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 99ms 
+2026-06-21 21:55:49 [INFO]: GET /api/trips/6a380eacde418fc5d37804b9 200 - 261ms 
+2026-06-21 21:56:02 [INFO]: GET /api/trips 200 - 35ms 
+2026-06-21 21:56:02 [INFO]: GET /api/trips 304 - 58ms 
+2026-06-21 21:56:08 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 21:56:08 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 21:56:13 [INFO]: GET /api/auth/me 200 - 7ms 
+2026-06-21 21:56:14 [INFO]: GET /api/auth/me 304 - 9ms 
+2026-06-21 21:56:14 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-21 21:56:14 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 22:02:00 [INFO]: GET /api/trips 401 - 6ms 
+2026-06-21 22:02:00 [INFO]: GET /api/trips 401 - 2ms 
+2026-06-21 22:02:00 [INFO]: POST /api/auth/refresh-token 200 - 38ms 
+2026-06-21 22:02:00 [INFO]: GET /api/trips 200 - 74ms 
+2026-06-21 22:02:00 [INFO]: GET /api/trips 304 - 81ms 
+2026-06-21 22:02:11 [INFO]: GET /api/trips 304 - 66ms 
+2026-06-21 22:02:12 [INFO]: GET /api/trips 304 - 63ms 
+2026-06-21 22:02:19 [INFO]: GET /api/trips 304 - 68ms 
+2026-06-21 22:02:19 [INFO]: GET /api/trips 304 - 61ms 
+2026-06-21 22:02:48 [INFO]: GET /api/trips 304 - 67ms 
+2026-06-21 22:02:48 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-21 22:03:37 [INFO]: GET /api/trips 304 - 66ms 
+2026-06-21 22:03:37 [INFO]: GET /api/trips 304 - 69ms 
+2026-06-21 22:05:39 [INFO]: GET /api/trips 304 - 61ms 
+2026-06-21 22:05:39 [INFO]: GET /api/trips 304 - 63ms 
+2026-06-21 22:05:48 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-21 22:05:49 [INFO]: GET /api/trips 304 - 66ms 
+2026-06-21 22:16:05 [INFO]: GET /api/auth/me 304 - 14ms 
+2026-06-21 22:16:05 [INFO]: GET /api/auth/me 304 - 6ms 
+2026-06-21 22:16:05 [INFO]: GET /api/trips 304 - 215ms 
+2026-06-21 22:16:05 [INFO]: GET /api/trips 304 - 221ms 
+2026-06-21 22:16:09 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 22:16:09 [INFO]: GET /api/auth/me 304 - 6ms 
+2026-06-21 22:16:09 [INFO]: GET /api/trips 304 - 64ms 
+2026-06-21 22:16:09 [INFO]: GET /api/trips 304 - 64ms 
+2026-06-21 22:16:32 [INFO]: GET /api/auth/me 304 - 10ms 
+2026-06-21 22:16:32 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 22:16:33 [INFO]: GET /api/trips 304 - 74ms 
+2026-06-21 22:16:33 [INFO]: GET /api/trips 304 - 183ms 
+2026-06-21 22:24:25 [INFO]: Gemini API service initialized 
+2026-06-21 22:24:26 [INFO]: MongoDB connected successfully 
+2026-06-21 22:24:30 [INFO]: GET /api/auth/me 401 - 10ms 
+2026-06-21 22:24:30 [INFO]: GET /api/auth/me 401 - 6ms 
+2026-06-21 22:24:30 [INFO]: POST /api/auth/refresh-token 200 - 118ms 
+2026-06-21 22:24:30 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 22:24:30 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 22:24:30 [INFO]: GET /api/trips 304 - 141ms 
+2026-06-21 22:24:30 [INFO]: GET /api/trips 304 - 67ms 
+2026-06-21 22:24:45 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 22:24:45 [INFO]: GET /api/auth/me 304 - 27ms 
+2026-06-21 22:24:45 [INFO]: GET /api/trips 304 - 189ms 
+2026-06-21 22:24:45 [INFO]: GET /api/trips 304 - 87ms 
+2026-06-21 22:24:53 [INFO]: DELETE /api/trips/6a380eacde418fc5d37804b9 200 - 51ms 
+2026-06-21 22:24:53 [INFO]: GET /api/trips 200 - 47ms 
+2026-06-21 22:25:21 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 22:25:21 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 22:25:24 [INFO]: POST /api/trips/6a3810a8de418fc5d37807a6/share 200 - 259ms 
+2026-06-21 22:25:28 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 91ms 
+2026-06-21 22:25:28 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 116ms 
+2026-06-21 22:25:31 [INFO]: POST /api/trips/6a3810a8de418fc5d37807a6/share 200 - 75ms 
+2026-06-21 22:25:54 [INFO]: Regenerating day: {"dayNumber":5,"userFeedback":"add a park in this"}
+2026-06-21 22:26:02 [INFO]: PUT /api/trips/6a3810a8de418fc5d37807a6/regenerate-day 200 - 7427ms 
+2026-06-21 22:26:48 [INFO]: GET /api/trips 200 - 37ms 
+2026-06-21 22:26:48 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 22:29:20 [INFO]: Gemini API service initialized 
+2026-06-21 22:29:20 [INFO]: MongoDB connected successfully 
+2026-06-21 22:29:33 [INFO]: GET /api/auth/me 304 - 10ms 
+2026-06-21 22:29:33 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 22:29:33 [INFO]: GET /api/trips 304 - 85ms 
+2026-06-21 22:29:33 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-21 22:31:57 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 105ms 
+2026-06-21 22:31:57 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 77ms 
+2026-06-21 22:35:31 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 22:35:31 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 22:35:31 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 91ms 
+2026-06-21 22:35:31 [INFO]: GET /api/trips/6a3810a8de418fc5d37807a6 200 - 74ms 
+2026-06-21 22:40:50 [ERROR]: Error occurred: {"error":"Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character","stack":"Error: Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-21 22:40:50 [INFO]: POST /api/auth/register 400 - 38ms 
+2026-06-21 22:42:03 [ERROR]: Error occurred: {"error":"Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character","stack":"Error: Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-21 22:42:03 [INFO]: POST /api/auth/register 400 - 39ms 
+2026-06-21 22:43:40 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:92:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-21 22:43:40 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:92:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-21 22:43:40 [INFO]: POST /api/auth/login 401 - 64ms 
+2026-06-21 22:45:14 [INFO]: User registered: new_user_101@example.com, verification token: d74bdff557ab542bafb9f4d91b33264b79751457a44beb18bbc32f20eff3a4b0 
+2026-06-21 22:45:14 [INFO]: POST /api/auth/register 201 - 555ms 
+2026-06-21 22:45:14 [INFO]: GET /api/trips 200 - 57ms 
+2026-06-21 22:45:14 [INFO]: GET /api/trips 304 - 53ms 
+2026-06-21 22:47:59 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 22:47:59 [INFO]: GET /api/trips 304 - 49ms 
+2026-06-21 22:50:48 [INFO]: GET /api/auth/me 200 - 2ms 
+2026-06-21 22:50:48 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 22:51:03 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 22:51:03 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 22:53:58 [INFO]: GET /api/trips 401 - 2ms 
+2026-06-21 22:53:58 [INFO]: GET /api/trips 401 - 4ms 
+2026-06-21 22:53:58 [INFO]: POST /api/auth/refresh-token 200 - 31ms 
+2026-06-21 22:53:59 [INFO]: GET /api/trips 200 - 49ms 
+2026-06-21 22:53:59 [INFO]: GET /api/trips 304 - 46ms 
+2026-06-21 22:54:42 [INFO]: MongoDB reconnected 
+2026-06-21 22:54:42 [INFO]: MongoDB reconnected 
+2026-06-21 22:54:47 [ERROR]: Get trips error: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net {"errorLabelSet":{},"reason":{"type":"ReplicaSetNoPrimary","servers":{"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205771204,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205771203,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205771205,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-126a4u-shard-0","maxElectionId":{"$oid":"7fffffff000000000000014c"},"maxSetVersion":322,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null},"stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:266:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","cause":{"errorLabelSet":{},"beforeHandshake":false}}
+2026-06-21 22:54:47 [ERROR]: Error occurred: {"error":"getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net","stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:266:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","path":"/api/trips","method":"GET","ip":"::1"}
+2026-06-21 22:54:47 [INFO]: GET /api/trips 500 - 10710ms 
+2026-06-21 22:54:52 [ERROR]: Get trips error: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net {"errorLabelSet":{},"reason":{"type":"ReplicaSetNoPrimary","servers":{"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205776364,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205776360,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205776363,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-126a4u-shard-0","maxElectionId":{"$oid":"7fffffff000000000000014c"},"maxSetVersion":322,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null},"stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","cause":{"errorLabelSet":{},"beforeHandshake":false}}
+2026-06-21 22:54:52 [ERROR]: Error occurred: {"error":"getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net","stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","path":"/api/trips","method":"GET","ip":"::1"}
+2026-06-21 22:54:52 [INFO]: GET /api/trips 500 - 5036ms 
+2026-06-21 22:54:57 [ERROR]: Get trips error: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net {"errorLabelSet":{},"reason":{"type":"ReplicaSetNoPrimary","servers":{"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205781489,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205781487,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205781488,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-126a4u-shard-0","maxElectionId":{"$oid":"7fffffff000000000000014c"},"maxSetVersion":322,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null},"stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","cause":{"errorLabelSet":{},"beforeHandshake":false}}
+2026-06-21 22:54:57 [ERROR]: Error occurred: {"error":"getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net","stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","path":"/api/trips","method":"GET","ip":"::1"}
+2026-06-21 22:54:57 [INFO]: GET /api/trips 500 - 5034ms 
+2026-06-21 22:55:02 [ERROR]: Get trips error: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net {"errorLabelSet":{},"reason":{"type":"ReplicaSetNoPrimary","servers":{"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205786618,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-02.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205786617,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false},"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017":{"address":"ac-gsehwvv-shard-00-01.jk8hvmf.mongodb.net:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":1205786618,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":"atlas-126a4u-shard-0","maxElectionId":{"$oid":"7fffffff000000000000014c"},"maxSetVersion":322,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null},"stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","cause":{"errorLabelSet":{},"beforeHandshake":false}}
+2026-06-21 22:55:02 [ERROR]: Error occurred: {"error":"getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net","stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-gsehwvv-shard-00-00.jk8hvmf.mongodb.net\n    at Topology.selectServer (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\sdam\\topology.ts:635:30)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at listOnTimeout (node:internal/timers:555:9)\n    at processTimers (node:internal/timers:529:7)\n    at tryOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:202:16)\n    at executeOperation (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\operations\\execute_operation.ts:119:12)\n    at AggregationCursor._initialize (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\aggregation_cursor.ts:92:22)\n    at AggregationCursor.cursorInit (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:949:21)\n    at AggregationCursor.fetchBatch (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:987:7)\n    at AggregationCursor.next (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongodb\\src\\cursor\\abstract_cursor.ts:608:9)","path":"/api/trips","method":"GET","ip":"::1"}
+2026-06-21 22:55:02 [INFO]: GET /api/trips 500 - 5048ms 
+2026-06-21 22:57:13 [WARN]: MongoDB disconnected 
+2026-06-21 22:57:13 [INFO]: MongoDB reconnected 
+2026-06-21 22:57:17 [INFO]: GET /api/trips 200 - 253ms 
+2026-06-21 22:57:17 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 22:57:40 [INFO]: GET /api/trips 304 - 47ms 
+2026-06-21 22:57:40 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:01:41 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-21 23:01:41 [INFO]: GET /api/trips 304 - 47ms 
+2026-06-21 23:02:47 [INFO]: GET /api/trips 304 - 42ms 
+2026-06-21 23:02:47 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-21 23:02:55 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:02:55 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:02:56 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-21 23:02:56 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 23:03:31 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:03:31 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 23:03:36 [INFO]: DELETE /api/trips/6a3810a8de418fc5d37807a6 200 - 55ms 
+2026-06-21 23:03:36 [INFO]: GET /api/trips 200 - 36ms 
+2026-06-21 23:08:54 [ERROR]: Error occurred: {"error":"Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character","stack":"Error: Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-21 23:08:54 [INFO]: POST /api/auth/register 400 - 45ms 
+2026-06-21 23:09:39 [INFO]: User registered: uniqueuser2026@example.com, verification token: b9dbd297ca05579179722e00b060a5f5798d9fcfb0a7a861f247ce50b84e7f5f 
+2026-06-21 23:09:39 [INFO]: POST /api/auth/register 201 - 656ms 
+2026-06-21 23:09:39 [INFO]: GET /api/trips 304 - 45ms 
+2026-06-21 23:09:39 [INFO]: GET /api/trips 304 - 45ms 
+2026-06-21 23:11:58 [INFO]: GET /api/trips 401 - 4ms 
+2026-06-21 23:11:58 [INFO]: GET /api/trips 401 - 2ms 
+2026-06-21 23:11:58 [INFO]: POST /api/auth/refresh-token 200 - 34ms 
+2026-06-21 23:11:58 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:11:58 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:12:11 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:12:11 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:12:39 [INFO]: Generating trip for user 6a380e30de418fc5d37804ae to Hyderabad 
+2026-06-21 23:12:39 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 23:13:24 [INFO]: GET /api/trips 200 - 36ms 
+2026-06-21 23:13:24 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-21 23:13:32 [INFO]: GET /api/trips/6a3822b8cb8baad60bc16e7a 200 - 71ms 
+2026-06-21 23:13:32 [INFO]: GET /api/trips/6a3822b8cb8baad60bc16e7a 200 - 88ms 
+2026-06-21 23:14:44 [INFO]: GET /api/trips 200 - 36ms 
+2026-06-21 23:14:44 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:14:49 [INFO]: DELETE /api/trips/6a3822b8cb8baad60bc16e7a 200 - 39ms 
+2026-06-21 23:14:49 [INFO]: GET /api/trips 200 - 30ms 
+2026-06-21 23:14:54 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:14:54 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:15:05 [INFO]: Generating trip for user 6a380e30de418fc5d37804ae to Mumbai 
+2026-06-21 23:15:05 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 23:15:19 [INFO]: POST /api/trips/generate 201 - 13231ms 
+2026-06-21 23:15:19 [INFO]: GET /api/trips/6a38232fcb8baad60bc16f80 200 - 68ms 
+2026-06-21 23:15:19 [INFO]: GET /api/trips/6a38232fcb8baad60bc16f80 200 - 75ms 
+2026-06-21 23:15:44 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"make it 2 days "}
+2026-06-21 23:16:16 [ERROR]: Regenerate day error: Trip validation failed: itinerary.0.dayNumber: Path `dayNumber` is required. {"errors":{"itinerary.0.dayNumber":{"name":"ValidatorError","message":"Path `dayNumber` is required.","properties":{"message":"Path `dayNumber` is required.","type":"required","path":"dayNumber"},"kind":"required","path":"dayNumber"}},"_message":"Trip validation failed","stack":"ValidationError: Trip validation failed: itinerary.0.dayNumber: Path `dayNumber` is required.\n    at model.Document.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\schemaType.js:1443:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)"}
+2026-06-21 23:16:16 [ERROR]: Error occurred: {"error":"Trip validation failed: itinerary.0.dayNumber: Path `dayNumber` is required.","stack":"ValidationError: Trip validation failed: itinerary.0.dayNumber: Path `dayNumber` is required.\n    at model.Document.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3381:32)\n    at EmbeddedDocument.Subdocument.invalidate (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\types\\subdocument.js:257:12)\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\document.js:3142:17\n    at C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\schemaType.js:1443:9\n    at processTicksAndRejections (node:internal/process/task_queues:85:11)","path":"/api/trips/6a38232fcb8baad60bc16f80/regenerate-day","method":"PUT","ip":"::1"}
+2026-06-21 23:16:33 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"remove beach"}
+2026-06-21 23:16:34 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":5}
+2026-06-21 23:16:49 [INFO]: PUT /api/trips/6a38232fcb8baad60bc16f80/regenerate-day 200 - 15459ms 
+2026-06-21 23:17:16 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"remove it already visitedGateway of India & Taj Mahal Palace Hotel"}
+2026-06-21 23:17:32 [INFO]: PUT /api/trips/6a38232fcb8baad60bc16f80/regenerate-day 200 - 15711ms 
+2026-06-21 23:17:49 [INFO]: GET /api/trips 200 - 35ms 
+2026-06-21 23:17:49 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:18:04 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 23:18:04 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 23:21:14 [INFO]: DELETE /api/trips/6a38232fcb8baad60bc16f80 200 - 52ms 
+2026-06-21 23:21:14 [INFO]: GET /api/trips 200 - 30ms 
+2026-06-21 23:23:57 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-21 23:23:57 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 23:28:23 [INFO]: GET /api/auth/me 401 - 5ms 
+2026-06-21 23:28:23 [INFO]: GET /api/auth/me 401 - 5ms 
+2026-06-21 23:28:23 [INFO]: POST /api/auth/refresh-token 200 - 37ms 
+2026-06-21 23:28:23 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:28:23 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:28:23 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:28:23 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:28:42 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:28:42 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:28:42 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-21 23:28:42 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:28:52 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:28:52 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:28:52 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:28:52 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:28:55 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:28:55 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:28:55 [INFO]: GET /api/trips 304 - 28ms 
+2026-06-21 23:28:55 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:29:03 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:29:03 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:29:03 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-21 23:29:03 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:29:05 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:29:05 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:05 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:29:05 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:29:07 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-21 23:29:07 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:07 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:29:07 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:29:08 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:08 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:29:08 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:29:08 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:29:11 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:29:11 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:11 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:29:11 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:29:37 [INFO]: GET /api/auth/me 304 - 12ms 
+2026-06-21 23:29:37 [INFO]: GET /api/auth/me 304 - 6ms 
+2026-06-21 23:29:37 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-21 23:29:37 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:29:39 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:39 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:39 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:29:39 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:29:42 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:29:42 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:29:42 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:29:42 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:29:44 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:44 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:29:45 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:29:45 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:29:55 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:29:55 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:29:55 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:29:55 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:30:22 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:30:22 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:30:22 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:30:22 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:30:24 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:30:24 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:30:24 [INFO]: GET /api/trips 304 - 28ms 
+2026-06-21 23:30:24 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:30:28 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:30:28 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:30:28 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:30:28 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:30:33 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:30:33 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:30:33 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:30:33 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:30:38 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:30:38 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:30:38 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:30:38 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:30:43 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:30:43 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-21 23:30:43 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-21 23:30:43 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:31:05 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-21 23:31:05 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:31:05 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:31:05 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:31:10 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:31:10 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:31:10 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:31:10 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:31:53 [INFO]: Gemini API service initialized 
+2026-06-21 23:31:53 [INFO]: MongoDB connected successfully 
+2026-06-21 23:32:08 [INFO]: GET /api/auth/me 304 - 10ms 
+2026-06-21 23:32:08 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:32:08 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-21 23:32:08 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:32:36 [INFO]: GET /api/auth/me 304 - 9ms 
+2026-06-21 23:32:36 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:32:36 [INFO]: GET /api/trips 304 - 44ms 
+2026-06-21 23:32:36 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:32:41 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:32:41 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:32:41 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:32:41 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:06 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:06 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:06 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:06 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:11 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:33:11 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:11 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-21 23:33:11 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:16 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-21 23:33:16 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:16 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:16 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:33:17 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:17 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:17 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:17 [INFO]: GET /api/trips 304 - 76ms 
+2026-06-21 23:33:19 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:33:19 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:33:19 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:19 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:33:36 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:36 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:36 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:36 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:39 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:33:39 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:33:39 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:39 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:33:44 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:33:44 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:44 [INFO]: GET /api/trips 304 - 28ms 
+2026-06-21 23:33:44 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:33:46 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:46 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:33:46 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:46 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:33:49 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:33:49 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:49 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:33:49 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:33:54 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-21 23:33:54 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:33:54 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:33:54 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:33:58 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:33:58 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:33:58 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:33:58 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:34:03 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:03 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:03 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:34:03 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:34:04 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:34:04 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:04 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:34:04 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:34:10 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:10 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:10 [INFO]: GET /api/trips 304 - 29ms 
+2026-06-21 23:34:10 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:34:14 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:14 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:14 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:34:14 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:34:19 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:34:19 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:19 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:34:19 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:34:20 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:20 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:20 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 23:34:20 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:34:21 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:21 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:21 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:34:21 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:34:23 [INFO]: GET /api/auth/me 304 - 1ms 
+2026-06-21 23:34:23 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:34:23 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 23:34:23 [INFO]: GET /api/trips 304 - 48ms 
+2026-06-21 23:34:24 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:34:24 [INFO]: GET /api/auth/me 304 - 10ms 
+2026-06-21 23:34:24 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:34:24 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:35:30 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 23:35:30 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:39:08 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-21 23:39:08 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-21 23:39:08 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:39:08 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:41:25 [INFO]: GET /api/trips 304 - 30ms 
+2026-06-21 23:41:25 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-21 23:42:51 [ERROR]: Error occurred: {"error":"Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character","stack":"Error: Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-21 23:42:51 [INFO]: POST /api/auth/register 400 - 161ms 
+2026-06-21 23:43:07 [INFO]: User registered: testuser_dynamic_stats@example.com, verification token: 1a901d3aaebf087efbf84a328612382c314b0e4bde104d11c68584cc5823911e 
+2026-06-21 23:43:07 [INFO]: POST /api/auth/register 201 - 667ms 
+2026-06-21 23:43:07 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-21 23:43:07 [INFO]: GET /api/trips 304 - 85ms 
+2026-06-21 23:43:14 [INFO]: GET /api/trips 304 - 70ms 
+2026-06-21 23:43:14 [INFO]: GET /api/trips 304 - 58ms 
+2026-06-21 23:44:06 [INFO]: Generating trip for user 6a3829b22c5272ffe08fbea9 to Delhi 
+2026-06-21 23:44:06 [INFO]: Generating trip plan with prompt length: 
+2026-06-21 23:44:23 [INFO]: POST /api/trips/generate 201 - 16702ms 
+2026-06-21 23:44:23 [INFO]: GET /api/trips/6a3829ff2c5272ffe08fbeb4 200 - 101ms 
+2026-06-21 23:44:23 [INFO]: GET /api/trips/6a3829ff2c5272ffe08fbeb4 200 - 132ms 
+2026-06-21 23:44:29 [INFO]: GET /api/trips 200 - 69ms 
+2026-06-21 23:44:29 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-21 23:45:16 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-21 23:45:16 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 23:45:22 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-21 23:45:22 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-21 23:45:38 [INFO]: GET /api/trips/6a3829ff2c5272ffe08fbeb4 200 - 81ms 
+2026-06-21 23:45:38 [INFO]: GET /api/trips/6a3829ff2c5272ffe08fbeb4 200 - 75ms 
+2026-06-21 23:45:53 [INFO]: GET /api/trips 200 - 40ms 
+2026-06-21 23:45:53 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-21 23:45:54 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-21 23:45:54 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-21 23:46:13 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-21 23:46:13 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-21 23:47:02 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-21 23:47:02 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-22 03:49:22 [INFO]: MongoDB reconnected 
+2026-06-22 03:49:23 [INFO]: MongoDB reconnected 
+2026-06-22 03:49:31 [WARN]: MongoDB disconnected 
+2026-06-22 03:49:33 [INFO]: MongoDB reconnected 
+2026-06-22 12:56:45 [INFO]: MongoDB reconnected 
+2026-06-22 12:56:45 [INFO]: MongoDB reconnected 
+2026-06-22 13:40:39 [WARN]: MongoDB disconnected 
+2026-06-22 13:40:39 [INFO]: MongoDB reconnected 
+2026-06-22 13:40:51 [INFO]: GET /api/auth/me 401 - 197ms 
+2026-06-22 13:40:51 [INFO]: GET /api/auth/me 401 - 54ms 
+2026-06-22 13:40:52 [INFO]: POST /api/auth/refresh-token 200 - 412ms 
+2026-06-22 13:40:52 [INFO]: GET /api/auth/me 200 - 15ms 
+2026-06-22 13:40:52 [INFO]: GET /api/auth/me 304 - 10ms 
+2026-06-22 13:40:52 [INFO]: GET /api/trips 304 - 309ms 
+2026-06-22 13:40:52 [INFO]: GET /api/trips 304 - 83ms 
+2026-06-22 13:41:06 [INFO]: GET /api/auth/me 401 - 8ms 
+2026-06-22 13:41:06 [INFO]: GET /api/auth/me 401 - 17ms 
+2026-06-22 13:41:06 [INFO]: POST /api/auth/refresh-token 200 - 54ms 
+2026-06-22 13:41:06 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 13:41:06 [INFO]: GET /api/auth/me 304 - 16ms 
+2026-06-22 13:41:06 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-22 13:41:06 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-22 13:41:47 [INFO]: GET /api/auth/me 304 - 13ms 
+2026-06-22 13:41:47 [INFO]: GET /api/auth/me 304 - 17ms 
+2026-06-22 13:41:47 [INFO]: GET /api/trips 304 - 53ms 
+2026-06-22 13:41:47 [INFO]: GET /api/trips 304 - 84ms 
+2026-06-22 13:41:49 [INFO]: GET /api/trips 304 - 42ms 
+2026-06-22 13:41:49 [INFO]: GET /api/trips 304 - 102ms 
+2026-06-22 13:42:13 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-22 13:42:13 [INFO]: GET /api/trips 304 - 267ms 
+2026-06-22 13:42:46 [INFO]: POST /api/auth/login 200 - 1159ms 
+2026-06-22 13:42:46 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 13:42:46 [INFO]: GET /api/trips 304 - 261ms 
+2026-06-22 13:43:17 [INFO]: Generating trip for user 6a37f49d03bfa1259a4c36d9 to Rishikesh 
+2026-06-22 13:43:17 [INFO]: Generating trip plan with prompt length: 
+2026-06-22 13:43:46 [INFO]: POST /api/trips/generate 201 - 28616ms 
+2026-06-22 13:43:46 [INFO]: GET /api/trips/6a38eeba2c5272ffe08fc144 200 - 441ms 
+2026-06-22 13:43:47 [INFO]: GET /api/trips/6a38eeba2c5272ffe08fc144 200 - 345ms 
+2026-06-22 13:43:54 [INFO]: POST /api/trips/6a38eeba2c5272ffe08fc144/share 200 - 90ms 
+2026-06-22 13:44:00 [INFO]: GET /api/auth/me 200 - 7ms 
+2026-06-22 13:44:00 [INFO]: GET /api/auth/me 304 - 9ms 
+2026-06-22 13:44:00 [INFO]: GET /api/shared/1eaa6e91e9f204e88f29edd323bc9941 200 - 81ms 
+2026-06-22 13:44:00 [INFO]: GET /api/shared/1eaa6e91e9f204e88f29edd323bc9941 200 - 152ms 
+2026-06-22 13:44:08 [INFO]: GET /api/trips 200 - 38ms 
+2026-06-22 13:44:08 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 13:45:06 [INFO]: GET /api/trips 304 - 258ms 
+2026-06-22 13:45:06 [INFO]: GET /api/trips 304 - 320ms 
+2026-06-22 13:45:23 [INFO]: GET /api/trips 304 - 300ms 
+2026-06-22 13:45:24 [INFO]: GET /api/trips 304 - 291ms 
+2026-06-22 13:45:29 [INFO]: GET /api/trips 304 - 53ms 
+2026-06-22 13:45:29 [INFO]: GET /api/trips 304 - 68ms 
+2026-06-22 13:48:59 [INFO]: GET /api/trips 304 - 349ms 
+2026-06-22 13:48:59 [INFO]: GET /api/trips 304 - 334ms 
+2026-06-22 14:08:25 [INFO]: Gemini API service initialized 
+2026-06-22 14:08:27 [INFO]: MongoDB connected successfully 
+2026-06-22 14:09:07 [INFO]: User registered: venky4creator@gmail.com, verification token: 22cd8b86e62f90313a837c487d221ae4103f0a31e92fa29879b71b06e3c73d6a 
+2026-06-22 14:09:07 [INFO]: POST /api/auth/register 201 - 1547ms 
+2026-06-22 14:09:07 [INFO]: GET /api/trips 200 - 54ms 
+2026-06-22 14:09:07 [INFO]: GET /api/trips 304 - 123ms 
+2026-06-22 14:12:13 [INFO]: Gemini API service initialized 
+2026-06-22 14:12:13 [INFO]: MongoDB connected successfully 
+2026-06-22 14:12:14 [INFO]: Email service configured successfully 
+2026-06-22 14:17:01 [INFO]: Gemini API service initialized 
+2026-06-22 14:17:02 [INFO]: MongoDB connected successfully 
+2026-06-22 14:17:03 [INFO]: Email service configured successfully 
+2026-06-22 14:17:15 [INFO]: Gemini API service initialized 
+2026-06-22 14:17:17 [INFO]: MongoDB connected successfully 
+2026-06-22 14:17:17 [INFO]: Email service configured successfully 
+2026-06-22 14:20:45 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-22 14:20:45 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 14:20:45 [INFO]: POST /api/auth/refresh-token 200 - 145ms 
+2026-06-22 14:20:45 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 14:20:45 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 14:20:45 [INFO]: GET /api/trips 304 - 268ms 
+2026-06-22 14:20:45 [INFO]: GET /api/trips 304 - 66ms 
+2026-06-22 14:31:22 [ERROR]: Error occurred: {"error":"Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character","stack":"Error: Validation failed: Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-22 14:31:22 [INFO]: POST /api/auth/register 400 - 13ms 
+2026-06-22 14:42:42 [INFO]: GET /api/auth/me 401 - 7ms 
+2026-06-22 14:42:42 [INFO]: GET /api/auth/me 401 - 7ms 
+2026-06-22 14:42:42 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 14:42:42 [INFO]: GET /api/auth/me 401 - 4ms 
+2026-06-22 14:42:43 [WARN]: MongoDB disconnected 
+2026-06-22 14:42:43 [INFO]: MongoDB reconnected 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 14:42:43 [INFO]: POST /api/auth/refresh-token 200 - 712ms 
+2026-06-22 14:42:43 [INFO]: POST /api/auth/refresh-token 200 - 742ms 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 200 - 4ms 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 14:42:43 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 14:42:44 [INFO]: POST /api/auth/refresh-token 200 - 800ms 
+2026-06-22 14:42:44 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 14:42:44 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 14:42:44 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-22 14:42:44 [INFO]: GET /api/trips 304 - 31ms 
+2026-06-22 14:51:12 [ERROR]: Error occurred: {"error":"Validation failed: Last name must be at least 2 characters","stack":"Error: Validation failed: Last name must be at least 2 characters\n    at C:\\Desktop\\TravelWave\\server\\src\\middleware\\validateRequest.ts:18:14\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/register","method":"POST","ip":"::1"}
+2026-06-22 14:51:12 [INFO]: POST /api/auth/register 400 - 14ms 
+2026-06-22 14:54:14 [INFO]: GET /api/auth/me 304 - 26ms 
+2026-06-22 14:54:14 [INFO]: GET /api/auth/me 304 - 14ms 
+2026-06-22 14:54:14 [INFO]: GET /api/trips 304 - 52ms 
+2026-06-22 14:54:14 [INFO]: GET /api/trips 304 - 50ms 
+2026-06-22 14:55:11 [INFO]: User registered: venky4creator@gmail.com, verification token: 1c2e2641f46f2f5676334cfaf89465737d863b26819969a2b66e8002d70e2912 
+2026-06-22 14:55:11 [INFO]: POST /api/auth/register 201 - 1549ms 
+2026-06-22 14:55:11 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 14:55:11 [INFO]: GET /api/trips 304 - 73ms 
+2026-06-22 14:55:16 [INFO]: Email sent successfully: {"messageId":"<888bd0f5-3738-0e11-991b-5326dd737509@travelwave.ai>","to":"venky4creator@gmail.com","subject":"Welcome to TravelWave! ✨ Please verify your email"}
+2026-06-22 14:56:23 [INFO]: User registered: venkyv676+test1782120382044@gmail.com, verification token: 8faab2cf8c69b6ef4490f3bdf7885647475c6712872c85e45a022d80e1812501 
+2026-06-22 14:56:23 [INFO]: POST /api/auth/register 201 - 1734ms 
+2026-06-22 14:56:25 [INFO]: Email sent successfully: {"messageId":"<5a829aea-b97a-dbe6-dbe5-ff2a5a672944@travelwave.ai>","to":"venkyv676+test1782120382044@gmail.com","subject":"Welcome to TravelWave! ✨ Please verify your email"}
+2026-06-22 14:57:13 [INFO]: Password reset token generated for venkyv676+test1782120382044@gmail.com 
+2026-06-22 14:57:13 [INFO]: POST /api/auth/forgot-password 200 - 212ms 
+2026-06-22 14:57:15 [INFO]: Email sent successfully: {"messageId":"<1f56c6fe-aa0e-a41e-1e1a-bd87417cfc82@travelwave.ai>","to":"venkyv676+test1782120382044@gmail.com","subject":"🔐 Reset Your TravelWave Password"}
+2026-06-22 14:58:26 [INFO]: Gemini API service initialized 
+2026-06-22 14:58:28 [INFO]: MongoDB connected successfully 
+2026-06-22 14:58:28 [INFO]: Email service configured successfully 
+2026-06-22 14:58:29 [INFO]: GET /api/auth/me 200 - 13ms 
+2026-06-22 14:58:29 [INFO]: GET /api/auth/me 304 - 12ms 
+2026-06-22 14:58:29 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-22 14:58:29 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-22 14:58:49 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-22 14:58:49 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 14:58:50 [INFO]: GET /api/trips 304 - 272ms 
+2026-06-22 14:58:50 [INFO]: GET /api/trips 304 - 49ms 
+2026-06-22 14:58:55 [INFO]: GET /api/auth/me 304 - 17ms 
+2026-06-22 14:58:55 [INFO]: GET /api/auth/me 304 - 8ms 
+2026-06-22 14:59:35 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 14:59:35 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 14:59:35 [INFO]: POST /api/auth/login 401 - 116ms 
+2026-06-22 15:00:19 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:00:19 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:00:19 [INFO]: POST /api/auth/login 401 - 69ms 
+2026-06-22 15:00:55 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:00:55 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:00:55 [INFO]: POST /api/auth/login 401 - 283ms 
+2026-06-22 15:01:24 [INFO]: User registered: venkatesh.lachireddi@gmail.com, verification token: ac78e69a5ed92f6c405ba3bc331d22d6b52a4ad0b3acfe09e8529302b3c4127f 
+2026-06-22 15:01:24 [INFO]: POST /api/auth/register 201 - 954ms 
+2026-06-22 15:01:24 [INFO]: GET /api/trips 304 - 44ms 
+2026-06-22 15:01:24 [INFO]: GET /api/trips 304 - 213ms 
+2026-06-22 15:01:28 [INFO]: Email sent successfully: {"messageId":"<d153ad08-2c3a-3fa6-5ee6-027ef2264430@travelwave.ai>","to":"venkatesh.lachireddi@gmail.com","subject":"Welcome to TravelWave! ✨ Please verify your email"}
+2026-06-22 15:01:39 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:01:39 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:01:39 [INFO]: POST /api/auth/login 401 - 938ms 
+2026-06-22 15:01:51 [INFO]: POST /api/auth/login 200 - 1497ms 
+2026-06-22 15:01:51 [INFO]: GET /api/trips 304 - 56ms 
+2026-06-22 15:01:51 [INFO]: GET /api/trips 304 - 241ms 
+2026-06-22 15:03:21 [INFO]: User registered: venky4creator@gmail.com, verification token: ab4fccc7ee06715b22527b09403211dadedceded25aa1317ff880d68f8274fc9 
+2026-06-22 15:03:21 [INFO]: POST /api/auth/register 201 - 890ms 
+2026-06-22 15:03:21 [INFO]: GET /api/trips 304 - 74ms 
+2026-06-22 15:03:21 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 15:03:23 [INFO]: Email sent successfully: {"messageId":"<7526892c-61cd-a1b4-a79f-e15408be1fd3@travelwave.ai>","to":"venky4creator@gmail.com","subject":"Welcome to TravelWave! ✨ Please verify your email"}
+2026-06-22 15:04:08 [INFO]: GET /api/trips 304 - 350ms 
+2026-06-22 15:04:08 [INFO]: GET /api/trips 304 - 335ms 
+2026-06-22 15:12:06 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:12:06 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:12:06 [INFO]: POST /api/auth/login 401 - 131ms 
+2026-06-22 15:17:55 [INFO]: GET /api/auth/me 200 - 18ms 
+2026-06-22 15:17:55 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 15:17:55 [INFO]: GET /api/trips 304 - 73ms 
+2026-06-22 15:17:55 [INFO]: GET /api/trips 304 - 316ms 
+2026-06-22 15:17:57 [INFO]: GET /api/trips 304 - 329ms 
+2026-06-22 15:17:57 [INFO]: GET /api/trips 304 - 336ms 
+2026-06-22 15:18:10 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:18:10 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:18:10 [INFO]: POST /api/auth/login 401 - 805ms 
+2026-06-22 15:18:54 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:18:54 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:18:54 [INFO]: POST /api/auth/login 401 - 1331ms 
+2026-06-22 15:19:12 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:19:12 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:19:12 [INFO]: POST /api/auth/login 401 - 302ms 
+2026-06-22 15:19:21 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:19:21 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:19:21 [INFO]: POST /api/auth/login 401 - 49ms 
+2026-06-22 15:19:41 [INFO]: Gemini API service initialized 
+2026-06-22 15:19:43 [INFO]: MongoDB connected successfully 
+2026-06-22 15:28:22 [INFO]: Gemini API service initialized 
+2026-06-22 15:28:24 [INFO]: MongoDB connected successfully 
+2026-06-22 15:28:24 [INFO]: Email service configured successfully 
+2026-06-22 15:30:51 [INFO]: POST /api/auth/login 200 - 1336ms 
+2026-06-22 15:30:51 [INFO]: GET /api/trips 304 - 52ms 
+2026-06-22 15:30:51 [INFO]: GET /api/trips 304 - 258ms 
+2026-06-22 15:30:59 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:30:59 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:30:59 [INFO]: POST /api/auth/login 401 - 1155ms 
+2026-06-22 15:31:10 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:31:10 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:31:10 [INFO]: POST /api/auth/login 401 - 366ms 
+2026-06-22 15:31:20 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:31:20 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:31:20 [INFO]: POST /api/auth/login 401 - 928ms 
+2026-06-22 15:31:33 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 15:31:33 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:114:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 15:31:33 [INFO]: POST /api/auth/login 401 - 1201ms 
+2026-06-22 15:31:47 [INFO]: POST /api/auth/login 200 - 1111ms 
+2026-06-22 15:31:47 [INFO]: GET /api/trips 304 - 79ms 
+2026-06-22 15:31:48 [INFO]: GET /api/trips 304 - 279ms 
+2026-06-22 15:32:02 [INFO]: GET /api/trips 304 - 150ms 
+2026-06-22 15:32:02 [INFO]: GET /api/trips 304 - 50ms 
+2026-06-22 15:34:29 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 15:34:29 [INFO]: GET /api/trips 304 - 42ms 
+2026-06-22 15:41:28 [INFO]: GET /api/trips 304 - 352ms 
+2026-06-22 15:41:29 [INFO]: GET /api/trips 304 - 439ms 
+2026-06-22 15:43:29 [INFO]: POST /api/auth/login 200 - 1423ms 
+2026-06-22 15:43:29 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-22 15:43:29 [INFO]: GET /api/trips 304 - 345ms 
+2026-06-22 15:43:50 [INFO]: GET /api/trips 304 - 336ms 
+2026-06-22 15:43:50 [INFO]: GET /api/trips 304 - 336ms 
+2026-06-22 15:53:21 [INFO]: GET /api/trips 304 - 47ms 
+2026-06-22 15:53:21 [INFO]: GET /api/trips 304 - 50ms 
+2026-06-22 15:56:57 [INFO]: Generating trip for user 6a390160feb4aaa6af8075f0 to Kolkata 
+2026-06-22 15:56:57 [INFO]: Generating trip plan with prompt length: 
+2026-06-22 15:57:26 [INFO]: POST /api/trips/generate 201 - 29503ms 
+2026-06-22 15:57:27 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 531ms 
+2026-06-22 15:57:27 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 469ms 
+2026-06-22 15:57:31 [INFO]: GET /api/trips 200 - 341ms 
+2026-06-22 15:57:31 [INFO]: GET /api/trips 304 - 336ms 
+2026-06-22 15:57:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 988ms 
+2026-06-22 15:57:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 111ms 
+2026-06-22 15:58:33 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 401 - 10ms 
+2026-06-22 15:58:33 [INFO]: POST /api/auth/refresh-token 200 - 305ms 
+2026-06-22 15:58:33 [INFO]: Generating packing list 
+2026-06-22 15:58:47 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 200 - 13441ms 
+2026-06-22 15:58:56 [INFO]: Generating packing list 
+2026-06-22 15:59:10 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 200 - 14191ms 
+2026-06-22 15:59:26 [INFO]: GET /api/trips 200 - 341ms 
+2026-06-22 15:59:26 [INFO]: GET /api/trips 304 - 194ms 
+2026-06-22 15:59:27 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 88ms 
+2026-06-22 15:59:27 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 75ms 
+2026-06-22 16:01:57 [INFO]: Gemini API service initialized 
+2026-06-22 16:01:58 [INFO]: MongoDB connected successfully 
+2026-06-22 16:02:00 [INFO]: Email service configured successfully 
+2026-06-22 16:02:11 [INFO]: Gemini API service initialized 
+2026-06-22 16:02:12 [INFO]: MongoDB connected successfully 
+2026-06-22 16:02:13 [INFO]: Email service configured successfully 
+2026-06-22 16:02:17 [INFO]: Gemini API service initialized 
+2026-06-22 16:02:18 [INFO]: MongoDB connected successfully 
+2026-06-22 16:02:19 [INFO]: Email service configured successfully 
+2026-06-22 16:03:08 [INFO]: Gemini API service initialized 
+2026-06-22 16:03:09 [INFO]: MongoDB connected successfully 
+2026-06-22 16:03:10 [INFO]: Email service configured successfully 
+2026-06-22 16:04:00 [INFO]: GET /api/auth/me 304 - 18ms 
+2026-06-22 16:04:00 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-22 16:04:01 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 231ms 
+2026-06-22 16:04:01 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 127ms 
+2026-06-22 16:04:05 [INFO]: Generating packing list 
+2026-06-22 16:04:19 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 200 - 14745ms 
+2026-06-22 16:04:37 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/packing/toggle/6a390fabed564e4bbad9a099 200 - 78ms 
+2026-06-22 16:05:08 [INFO]: GET /api/trips 200 - 39ms 
+2026-06-22 16:05:08 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 16:05:11 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 83ms 
+2026-06-22 16:05:11 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 72ms 
+2026-06-22 16:05:28 [INFO]: GET /api/trips 200 - 427ms 
+2026-06-22 16:05:29 [INFO]: GET /api/trips 304 - 177ms 
+2026-06-22 16:05:33 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-22 16:05:33 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 16:05:43 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 16:05:43 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 16:05:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 71ms 
+2026-06-22 16:05:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 456ms 
+2026-06-22 16:05:47 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/share 200 - 98ms 
+2026-06-22 16:07:56 [INFO]: Gemini API service initialized 
+2026-06-22 16:07:58 [INFO]: Email service configured successfully 
+2026-06-22 16:07:58 [INFO]: MongoDB connected successfully 
+2026-06-22 16:08:11 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 131ms 
+2026-06-22 16:10:04 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 7707ms 
+2026-06-22 16:17:50 [INFO]: Gemini API service initialized 
+2026-06-22 16:17:51 [INFO]: MongoDB connected successfully 
+2026-06-22 16:17:52 [INFO]: Email service configured successfully 
+2026-06-22 16:18:15 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-22 16:18:15 [INFO]: GET /api/auth/me 401 - 2ms 
+2026-06-22 16:18:15 [INFO]: POST /api/auth/refresh-token 200 - 52ms 
+2026-06-22 16:18:15 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 16:18:15 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 16:18:15 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 115ms 
+2026-06-22 16:18:15 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 84ms 
+2026-06-22 16:18:24 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 7488ms 
+2026-06-22 16:18:38 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 2100ms 
+2026-06-22 16:27:53 [INFO]: Gemini API service initialized 
+2026-06-22 16:27:53 [INFO]: MongoDB connected successfully 
+2026-06-22 16:27:55 [INFO]: Email service configured successfully 
+2026-06-22 16:28:09 [INFO]: Gemini API service initialized 
+2026-06-22 16:28:09 [INFO]: MongoDB connected successfully 
+2026-06-22 16:28:10 [INFO]: Email service configured successfully 
+2026-06-22 16:29:09 [INFO]: Gemini API service initialized 
+2026-06-22 16:29:10 [INFO]: MongoDB connected successfully 
+2026-06-22 16:29:10 [INFO]: Email service configured successfully 
+2026-06-22 16:29:41 [INFO]: Gemini API service initialized 
+2026-06-22 16:29:42 [INFO]: MongoDB connected successfully 
+2026-06-22 16:29:43 [INFO]: Email service configured successfully 
+2026-06-22 16:30:42 [INFO]: Gemini API service initialized 
+2026-06-22 16:30:43 [INFO]: MongoDB connected successfully 
+2026-06-22 16:30:44 [INFO]: Email service configured successfully 
+2026-06-22 16:32:34 [INFO]: Gemini API service initialized 
+2026-06-22 16:32:36 [INFO]: MongoDB connected successfully 
+2026-06-22 16:32:36 [INFO]: Email service configured successfully 
+2026-06-22 16:32:42 [INFO]: Gemini API service initialized 
+2026-06-22 16:32:43 [INFO]: Email service configured successfully 
+2026-06-22 16:32:44 [INFO]: MongoDB connected successfully 
+2026-06-22 16:33:16 [INFO]: Gemini API service initialized 
+2026-06-22 16:33:17 [INFO]: MongoDB connected successfully 
+2026-06-22 16:33:18 [INFO]: Email service configured successfully 
+2026-06-22 16:33:36 [INFO]: Gemini API service initialized 
+2026-06-22 16:33:37 [INFO]: MongoDB connected successfully 
+2026-06-22 16:33:37 [INFO]: Email service configured successfully 
+2026-06-22 16:34:33 [INFO]: Gemini API service initialized 
+2026-06-22 16:34:34 [INFO]: Email service configured successfully 
+2026-06-22 16:34:34 [INFO]: MongoDB connected successfully 
+2026-06-22 16:34:47 [INFO]: GET /api/auth/me 401 - 13ms 
+2026-06-22 16:34:47 [INFO]: GET /api/auth/me 401 - 5ms 
+2026-06-22 16:34:47 [INFO]: POST /api/auth/refresh-token 200 - 47ms 
+2026-06-22 16:34:47 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 16:34:47 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 16:34:48 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 117ms 
+2026-06-22 16:34:48 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 87ms 
+2026-06-22 16:34:51 [INFO]: GET /api/trips 200 - 40ms 
+2026-06-22 16:34:51 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-22 16:34:55 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 84ms 
+2026-06-22 16:34:55 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 87ms 
+2026-06-22 16:35:15 [INFO]: Generating packing list 
+2026-06-22 16:35:19 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":5}
+2026-06-22 16:35:21 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":4}
+2026-06-22 16:35:24 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":3}
+2026-06-22 16:35:49 [INFO]: Generating packing list 
+2026-06-22 16:36:03 [ERROR]: Generate packing list error: No matching document found for id "6a390e0eb2363e1ce5f59be1" version 2 modifiedPaths "packingList" {"version":2,"modifiedPaths":["packingList"],"stack":"VersionError: No matching document found for id \"6a390e0eb2363e1ce5f59be1\" version 2 modifiedPaths \"packingList\"\n    at generateVersionError (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\model.js:566:10)\n    at model.save (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\model.js:624:28)\n    at generatePackingList (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:406:18)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 16:36:03 [ERROR]: Error occurred: {"error":"No matching document found for id \"6a390e0eb2363e1ce5f59be1\" version 2 modifiedPaths \"packingList\"","stack":"VersionError: No matching document found for id \"6a390e0eb2363e1ce5f59be1\" version 2 modifiedPaths \"packingList\"\n    at generateVersionError (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\model.js:566:10)\n    at model.save (C:\\Desktop\\TravelWave\\server\\src\\node_modules\\mongoose\\lib\\model.js:624:28)\n    at generatePackingList (C:\\Desktop\\TravelWave\\server\\src\\controllers\\trip.controller.ts:406:18)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate","method":"POST","ip":"::1"}
+2026-06-22 16:36:03 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 500 - 13770ms 
+2026-06-22 16:36:27 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"i want to visit only 3 places"}
+2026-06-22 16:36:40 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/regenerate-day 200 - 12961ms 
+2026-06-22 16:37:13 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"i wan to visit only 3 places so make plan for 3 places only"}
+2026-06-22 16:37:32 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/regenerate-day 200 - 19337ms 
+2026-06-22 16:37:55 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"remove this Traditional Bengali Breakfast"}
+2026-06-22 16:38:01 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/regenerate-day 200 - 6128ms 
+2026-06-22 16:38:19 [INFO]: Generating packing list 
+2026-06-22 16:38:22 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":5}
+2026-06-22 16:38:37 [INFO]: POST /api/trips/6a390e0eb2363e1ce5f59be1/packing/regenerate 200 - 18034ms 
+2026-06-22 16:39:28 [INFO]: Gemini API service initialized 
+2026-06-22 16:39:29 [INFO]: MongoDB connected successfully 
+2026-06-22 16:39:30 [INFO]: Email service configured successfully 
+2026-06-22 16:46:48 [INFO]: GET /api/trips 200 - 85ms 
+2026-06-22 16:46:48 [INFO]: GET /api/trips 304 - 47ms 
+2026-06-22 16:47:17 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-22 16:47:17 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 16:47:26 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-22 16:47:26 [INFO]: GET /api/trips 304 - 43ms 
+2026-06-22 16:47:28 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 109ms 
+2026-06-22 16:47:28 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 81ms 
+2026-06-22 16:49:09 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/packing/toggle/6a3917b56960a98460b5aba0 200 - 78ms 
+2026-06-22 16:51:04 [INFO]: GET /api/auth/me 401 - 6ms 
+2026-06-22 16:51:04 [INFO]: GET /api/auth/me 401 - 4ms 
+2026-06-22 16:51:04 [INFO]: POST /api/auth/refresh-token 200 - 47ms 
+2026-06-22 16:51:04 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 16:51:04 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-22 16:51:04 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 85ms 
+2026-06-22 16:51:04 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 470ms 
+2026-06-22 16:53:24 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/packing/toggle/6a3917b56960a98460b5aba0 200 - 122ms 
+2026-06-22 16:53:25 [INFO]: PUT /api/trips/6a390e0eb2363e1ce5f59be1/packing/toggle/6a3917b56960a98460b5aba0 200 - 79ms 
+2026-06-22 16:54:04 [INFO]: GET /api/trips 200 - 40ms 
+2026-06-22 16:54:04 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 16:59:41 [INFO]: GET /api/trips 304 - 165ms 
+2026-06-22 16:59:41 [INFO]: GET /api/trips 304 - 88ms 
+2026-06-22 16:59:49 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 16:59:49 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 16:59:52 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 16:59:52 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 16:59:54 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 110ms 
+2026-06-22 16:59:54 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 90ms 
+2026-06-22 17:00:14 [INFO]: GET /api/trips 200 - 49ms 
+2026-06-22 17:00:14 [INFO]: GET /api/trips 304 - 75ms 
+2026-06-22 17:05:30 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 17:05:30 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 17:05:32 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 17:05:32 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-22 17:05:43 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 17:05:43 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 17:05:47 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 17:05:47 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-22 17:05:52 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 17:05:52 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 17:05:54 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 91ms 
+2026-06-22 17:05:54 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 80ms 
+2026-06-22 17:06:35 [INFO]: GET /api/trips 401 - 7ms 
+2026-06-22 17:06:35 [INFO]: GET /api/trips 401 - 2ms 
+2026-06-22 17:06:35 [INFO]: POST /api/auth/refresh-token 200 - 36ms 
+2026-06-22 17:06:35 [INFO]: GET /api/trips 200 - 166ms 
+2026-06-22 17:06:35 [INFO]: GET /api/trips 304 - 188ms 
+2026-06-22 17:06:50 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 17:06:50 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-22 17:07:21 [INFO]: GET /api/trips 304 - 222ms 
+2026-06-22 17:07:22 [INFO]: GET /api/trips 304 - 213ms 
+2026-06-22 17:07:24 [INFO]: GET /api/trips 304 - 60ms 
+2026-06-22 17:07:24 [INFO]: GET /api/trips 304 - 59ms 
+2026-06-22 17:07:49 [INFO]: GET /api/trips 304 - 60ms 
+2026-06-22 17:07:49 [INFO]: GET /api/trips 304 - 60ms 
+2026-06-22 17:07:56 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-22 17:07:56 [INFO]: GET /api/trips 304 - 65ms 
+2026-06-22 17:07:59 [INFO]: GET /api/trips 304 - 279ms 
+2026-06-22 17:07:59 [INFO]: GET /api/trips 304 - 58ms 
+2026-06-22 17:10:28 [INFO]: Gemini API service initialized 
+2026-06-22 17:10:28 [INFO]: MongoDB connected successfully 
+2026-06-22 17:10:29 [INFO]: Email service configured successfully 
+2026-06-22 17:10:32 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-22 17:10:32 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 17:10:32 [INFO]: GET /api/trips 304 - 58ms 
+2026-06-22 17:10:32 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 17:10:35 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 97ms 
+2026-06-22 17:10:35 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 79ms 
+2026-06-22 17:10:39 [INFO]: ✅ Logo found for PDF: {"0":"C","1":":","2":"\\","3":"D","4":"e","5":"s","6":"k","7":"t","8":"o","9":"p","10":"\\","11":"T","12":"r","13":"a","14":"v","15":"e","16":"l","17":"W","18":"a","19":"v","20":"e","21":"\\","22":"c","23":"l","24":"i","25":"e","26":"n","27":"t","28":"\\","29":"s","30":"r","31":"c","32":"\\","33":"a","34":"s","35":"s","36":"e","37":"t","38":"s","39":"\\","40":"T","41":"r","42":"a","43":"v","44":"e","45":"l","46":"W","47":"a","48":"v","49":"e","50":".","51":"p","52":"n","53":"g"}
+2026-06-22 17:15:10 [INFO]: Gemini API service initialized 
+2026-06-22 17:15:12 [INFO]: Email service configured successfully 
+2026-06-22 17:15:12 [INFO]: MongoDB connected successfully 
+2026-06-22 17:23:41 [INFO]: GET /api/auth/me 401 - 16ms 
+2026-06-22 17:23:41 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 17:23:41 [INFO]: POST /api/auth/refresh-token 200 - 52ms 
+2026-06-22 17:23:41 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 17:23:41 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 17:23:41 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 137ms 
+2026-06-22 17:23:42 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 102ms 
+2026-06-22 17:23:49 [INFO]: ✅ Logo found for PDF: {"0":"C","1":":","2":"\\","3":"D","4":"e","5":"s","6":"k","7":"t","8":"o","9":"p","10":"\\","11":"T","12":"r","13":"a","14":"v","15":"e","16":"l","17":"W","18":"a","19":"v","20":"e","21":"\\","22":"c","23":"l","24":"i","25":"e","26":"n","27":"t","28":"\\","29":"s","30":"r","31":"c","32":"\\","33":"a","34":"s","35":"s","36":"e","37":"t","38":"s","39":"\\","40":"T","41":"r","42":"a","43":"v","44":"e","45":"l","46":"W","47":"a","48":"v","49":"e","50":".","51":"p","52":"n","53":"g"}
+2026-06-22 17:28:41 [INFO]: Gemini API service initialized 
+2026-06-22 17:28:41 [INFO]: Gemini API service initialized 
+2026-06-22 17:28:41 [INFO]: MongoDB connected successfully 
+2026-06-22 17:28:42 [INFO]: Email service configured successfully 
+2026-06-22 17:28:42 [INFO]: Email service configured successfully 
+2026-06-22 17:28:44 [INFO]: Gemini API service initialized 
+2026-06-22 17:28:44 [INFO]: Gemini API service initialized 
+2026-06-22 17:28:44 [INFO]: MongoDB connected successfully 
+2026-06-22 17:38:33 [INFO]: Gemini API service initialized 
+2026-06-22 17:38:33 [INFO]: MongoDB connected successfully 
+2026-06-22 17:38:34 [INFO]: Email service configured successfully 
+2026-06-22 17:38:44 [INFO]: GET /api/auth/me 401 - 14ms 
+2026-06-22 17:38:44 [INFO]: GET /api/auth/me 401 - 2ms 
+2026-06-22 17:38:44 [INFO]: POST /api/auth/refresh-token 200 - 55ms 
+2026-06-22 17:38:44 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 17:38:44 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 17:38:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 138ms 
+2026-06-22 17:38:45 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 137ms 
+2026-06-22 17:38:47 [INFO]: ✅ Logo found for PDF: {"0":"C","1":":","2":"\\","3":"D","4":"e","5":"s","6":"k","7":"t","8":"o","9":"p","10":"\\","11":"T","12":"r","13":"a","14":"v","15":"e","16":"l","17":"W","18":"a","19":"v","20":"e","21":"\\","22":"c","23":"l","24":"i","25":"e","26":"n","27":"t","28":"\\","29":"s","30":"r","31":"c","32":"\\","33":"a","34":"s","35":"s","36":"e","37":"t","38":"s","39":"\\","40":"T","41":"r","42":"a","43":"v","44":"e","45":"l","46":"W","47":"a","48":"v","49":"e","50":".","51":"p","52":"n","53":"g"}
+2026-06-22 17:38:50 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 2373ms 
+2026-06-22 17:44:11 [INFO]: Gemini API service initialized 
+2026-06-22 17:44:12 [INFO]: MongoDB connected successfully 
+2026-06-22 17:44:12 [INFO]: Email service configured successfully 
+2026-06-22 17:44:46 [INFO]: GET /api/auth/me 304 - 12ms 
+2026-06-22 17:44:46 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-22 17:44:46 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 118ms 
+2026-06-22 17:44:47 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 90ms 
+2026-06-22 17:44:48 [INFO]: ✅ Logo found for PDF: {"0":"C","1":":","2":"\\","3":"D","4":"e","5":"s","6":"k","7":"t","8":"o","9":"p","10":"\\","11":"T","12":"r","13":"a","14":"v","15":"e","16":"l","17":"W","18":"a","19":"v","20":"e","21":"\\","22":"c","23":"l","24":"i","25":"e","26":"n","27":"t","28":"\\","29":"s","30":"r","31":"c","32":"\\","33":"a","34":"s","35":"s","36":"e","37":"t","38":"s","39":"\\","40":"T","41":"r","42":"a","43":"v","44":"e","45":"l","46":"W","47":"a","48":"v","49":"e","50":".","51":"p","52":"n","53":"g"}
+2026-06-22 17:45:01 [INFO]: ✅ PDF generated successfully (536408 bytes) 
+2026-06-22 17:45:01 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 12813ms 
+2026-06-22 17:49:10 [INFO]: Gemini API service initialized 
+2026-06-22 17:49:11 [INFO]: Email service configured successfully 
+2026-06-22 17:49:12 [INFO]: MongoDB connected successfully 
+2026-06-22 18:04:37 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-22 18:04:37 [INFO]: GET /api/auth/me 401 - 2ms 
+2026-06-22 18:04:37 [INFO]: POST /api/auth/refresh-token 200 - 51ms 
+2026-06-22 18:04:37 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 18:04:37 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 18:04:37 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 121ms 
+2026-06-22 18:04:38 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 473ms 
+2026-06-22 18:04:39 [INFO]: ✅ Logo found for PDF: {"0":"C","1":":","2":"\\","3":"D","4":"e","5":"s","6":"k","7":"t","8":"o","9":"p","10":"\\","11":"T","12":"r","13":"a","14":"v","15":"e","16":"l","17":"W","18":"a","19":"v","20":"e","21":"\\","22":"c","23":"l","24":"i","25":"e","26":"n","27":"t","28":"\\","29":"s","30":"r","31":"c","32":"\\","33":"a","34":"s","35":"s","36":"e","37":"t","38":"s","39":"\\","40":"T","41":"r","42":"a","43":"v","44":"e","45":"l","46":"W","47":"a","48":"v","49":"e","50":".","51":"p","52":"n","53":"g"}
+2026-06-22 18:04:41 [INFO]: ✅ PDF generated (367044 bytes) 
+2026-06-22 18:04:41 [INFO]: GET /api/export/6a390e0eb2363e1ce5f59be1/pdf 200 - 2316ms 
+2026-06-22 18:06:12 [INFO]: GET /api/trips 200 - 47ms 
+2026-06-22 18:06:12 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-22 18:06:18 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 18:06:18 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-22 18:06:21 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 18:06:21 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-22 18:06:54 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 18:06:54 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-22 18:06:56 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 18:06:56 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 18:06:58 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 84ms 
+2026-06-22 18:06:58 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 77ms 
+2026-06-22 18:07:27 [INFO]: GET /api/trips 200 - 40ms 
+2026-06-22 18:07:27 [INFO]: GET /api/trips 304 - 51ms 
+2026-06-22 18:07:50 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 242ms 
+2026-06-22 18:07:50 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 83ms 
+2026-06-22 18:15:56 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 18:15:56 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 18:15:56 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 93ms 
+2026-06-22 18:15:56 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 83ms 
+2026-06-22 18:16:11 [INFO]: GET /api/trips 200 - 35ms 
+2026-06-22 18:16:11 [INFO]: GET /api/trips 304 - 78ms 
+2026-06-22 18:16:18 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 82ms 
+2026-06-22 18:16:18 [INFO]: GET /api/trips/6a390e0eb2363e1ce5f59be1 200 - 170ms 
+2026-06-22 18:16:47 [INFO]: GET /api/trips 200 - 41ms 
+2026-06-22 18:16:47 [INFO]: GET /api/trips 304 - 183ms 
+2026-06-22 18:16:56 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 18:16:56 [INFO]: GET /api/trips 304 - 49ms 
+2026-06-22 18:17:00 [INFO]: GET /api/trips 304 - 190ms 
+2026-06-22 18:17:01 [INFO]: GET /api/trips 304 - 94ms 
+2026-06-22 18:18:11 [INFO]: POST /api/auth/login 200 - 649ms 
+2026-06-22 18:18:11 [INFO]: GET /api/trips 304 - 101ms 
+2026-06-22 18:18:11 [INFO]: GET /api/trips 304 - 61ms 
+2026-06-22 18:27:23 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
+2026-06-22 18:27:23 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
+2026-06-22 18:27:23 [INFO]: POST /api/auth/login 401 - 81ms 
+2026-06-22 18:27:30 [INFO]: POST /api/auth/login 200 - 406ms 
+2026-06-22 18:27:30 [INFO]: GET /api/trips 200 - 80ms 
+2026-06-22 18:27:31 [INFO]: GET /api/trips 304 - 173ms 
+2026-06-22 18:27:35 [INFO]: GET /api/auth/me 200 - 3ms 
+2026-06-22 18:27:35 [INFO]: GET /api/auth/me 304 - 48ms 
+2026-06-22 18:28:48 [INFO]: GET /api/trips 304 - 73ms 
+2026-06-22 18:28:48 [INFO]: GET /api/trips 304 - 80ms 
+2026-06-22 18:31:20 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 18:31:20 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 18:31:20 [INFO]: GET /api/trips 304 - 67ms 
+2026-06-22 18:31:20 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-22 18:31:44 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 18:31:44 [INFO]: GET /api/trips 304 - 50ms 
+2026-06-22 18:31:54 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 18:31:54 [INFO]: GET /api/trips 304 - 58ms 
+2026-06-22 18:34:30 [INFO]: GET /api/trips 401 - 13ms 
+2026-06-22 18:34:30 [INFO]: GET /api/trips 401 - 5ms 
+2026-06-22 18:34:30 [INFO]: POST /api/auth/refresh-token 200 - 36ms 
+2026-06-22 18:34:30 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 18:34:30 [INFO]: GET /api/trips 304 - 41ms 
+2026-06-22 18:34:35 [INFO]: GET /api/trips 304 - 38ms 
+2026-06-22 18:34:35 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-22 18:35:56 [INFO]: Gemini API service initialized 
+2026-06-22 18:35:58 [INFO]: Gemini API service initialized 
+2026-06-22 18:35:59 [INFO]: MongoDB connected successfully 
+2026-06-22 18:36:00 [INFO]: Email service configured successfully 
+2026-06-22 18:36:08 [INFO]: GET /api/trips 304 - 67ms 
+2026-06-22 18:36:08 [INFO]: GET /api/trips 304 - 37ms 
+2026-06-22 18:36:11 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-22 18:36:11 [INFO]: GET /api/trips 304 - 36ms 

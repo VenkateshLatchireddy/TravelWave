@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const trip_controller_1 = require("../controllers/trip.controller");
+const auth_1 = require("../middleware/auth");
+const asyncHandler_1 = require("../middleware/asyncHandler");
+const rateLimiter_1 = require("../middleware/rateLimiter");
+const validateRequest_1 = require("../middleware/validateRequest");
+const trip_validator_1 = require("../validators/trip.validator");
+const router = (0, express_1.Router)();
+const tripController = trip_controller_1.TripController.getInstance();
+router.use(auth_1.authMiddleware);
+router.post('/generate', (0, rateLimiter_1.rateLimiter)({ windowMs: 5 * 60 * 1000, max: 3 }), (0, validateRequest_1.validateRequest)(trip_validator_1.validateTripGeneration), (0, asyncHandler_1.asyncHandler)(tripController.generateTrip));
+router.get('/', (0, asyncHandler_1.asyncHandler)(tripController.getTrips));
+router.get('/:id', (0, asyncHandler_1.asyncHandler)(tripController.getTripById));
+router.put('/:id', (0, validateRequest_1.validateRequest)(trip_validator_1.validateTripUpdate), (0, asyncHandler_1.asyncHandler)(tripController.updateTrip));
+router.delete('/:id', (0, asyncHandler_1.asyncHandler)(tripController.deleteTrip));
+router.post('/:id/activities', (0, validateRequest_1.validateRequest)(trip_validator_1.validateAddActivity), (0, asyncHandler_1.asyncHandler)(tripController.addActivity));
+router.delete('/:id/activities', (0, validateRequest_1.validateRequest)(trip_validator_1.validateRemoveActivity), (0, asyncHandler_1.asyncHandler)(tripController.removeActivity));
+router.put('/:id/regenerate-day', (0, validateRequest_1.validateRequest)(trip_validator_1.validateRegenerateDay), (0, asyncHandler_1.asyncHandler)(tripController.regenerateDay));
+router.put('/:id/packing', (0, asyncHandler_1.asyncHandler)(tripController.updatePackingList));
+router.put('/:id/packing/toggle/:itemId', (0, asyncHandler_1.asyncHandler)(tripController.togglePackingItem));
+router.post('/:id/packing/regenerate', (0, asyncHandler_1.asyncHandler)(tripController.generatePackingList));
+router.post('/:id/share', (0, asyncHandler_1.asyncHandler)(tripController.shareTrip));
+exports.default = router;
+//# sourceMappingURL=trip.routes.js.map

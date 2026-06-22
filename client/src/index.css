@@ -1,0 +1,417 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base palette: Chili Spice - warm red palette */
+    --background: 12 100% 98%; /* Very light warm cream (near-white) */
+    --foreground: 349 100% 11%; /* Deep maroon #38000A for text */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 349 100% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 349 100% 11%;
+
+    /* Primary brand: Deep chili red #9B1313 */
+    --primary: 0 78% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary brand: Vibrant red #CD1C18 */
+    --secondary: 1 79% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: Soft peach / warm tint #FFDCCA */
+    --muted: 14 100% 92%;
+    --muted-foreground: 8 60% 28%;
+
+    /* Accent: Warm peach highlight #FFA896 */
+    --accent: 10 100% 79%;
+    --accent-foreground: 349 100% 11%;
+
+    /* Destructive (danger) */
+    --destructive: 350 75% 55%;
+    --destructive-foreground: 210 24% 95%;
+
+    /* Borders, inputs, rings */
+    --border: 177 20% 82%; /* Soft cool border #C6DFDE */
+    --input: 177 20% 82%;
+    --ring: 220 67% 55%;
+
+    /* Additional variables used by legacy CSS */
+    --accent-bg: rgba(208, 231, 230, 0.45);
+    --accent-border: rgba(149, 204, 221, 0.6);
+    --text-h: hsl(231 55% 15%);
+    --social-bg: rgba(236, 239, 244, 0.85);
+    --shadow: 0 12px 32px -8px rgba(155, 19, 19, 0.05);
+
+    --radius: 0.85rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Apply display font Outfit to headings for premium editorial feel */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', var(--font-sans, sans-serif);
+    letter-spacing: -0.015em;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+     background: linear-gradient(135deg, #CD1C18 0%, #9B1313 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(149, 204, 221, 0.4);
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background-color: #eceff4;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+     background-color: #9B1313;
+    border-radius: 9999px;
+  }
+}
+
+/* Global Color & Design Mappings for Cohesive Redesign */
+
+/* Primary backgrounds remapped to cool ice backgrounds and cards */
+[class*="bg-slate-950"] {
+  background-color: hsl(var(--background)) !important;
+}
+
+[class*="bg-slate-900"] {
+  background-color: hsl(var(--card)) !important;
+}
+
+[class*="bg-slate-800"] {
+  background-color: #f3f6f9 !important; /* soft cool grey tint */
+}
+
+[class*="bg-slate-700"] {
+  background-color: #e5edf3 !important; /* cozy warm sand replaced with ice blue */
+}
+
+/* Borders */
+[class*="border-slate-800"],
+[class*="border-slate-700"],
+[class*="border-slate-600"],
+[class*="border-stone-200"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+/* Foreground typography mapping */
+[class*="text-slate-100"],
+[class*="text-slate-200"],
+[class*="text-slate-300"],
+[class*="text-stone-900"],
+[class*="text-stone-950"] {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Muted typography mapping */
+[class*="text-slate-400"],
+[class*="text-slate-500"],
+[class*="text-slate-600"],
+[class*="text-stone-500"],
+[class*="text-stone-600"] {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Indigo/blue references mapped to Sky/Royal Blue #4274D9 */
+[class*="text-indigo-400"],
+[class*="text-indigo-500"],
+[class*="text-indigo-600"] {
+  color: hsl(var(--secondary)) !important;
+}
+
+[class*="bg-indigo-500"],
+[class*="bg-indigo-600"] {
+  background-color: hsl(var(--secondary)) !important;
+}
+
+[class*="border-indigo-500"],
+[class*="border-indigo-300"] {
+  border-color: hsl(var(--secondary)) !important;
+}
+
+[class*="ring-indigo-500"] {
+  --tw-ring-color: hsl(var(--ring)) !important;
+}
+
+/* Cyan & Teal colors mapped to Deep Indigo #293681 and Seafoam #D0E7E6 */
+[class*="text-cyan-800"],
+[class*="text-cyan-700"] {
+  color: hsl(var(--primary)) !important;
+}
+[class*="text-teal-600"],
+[class*="text-teal-700"] {
+  color: hsl(var(--secondary)) !important;
+}
+[class*="bg-teal-50"] {
+  background-color: #EBF3FC !important; /* Soft sky blue cream */
+}
+[class*="border-teal-200"],
+[class*="border-teal-300"] {
+  border-color: #C5DCF8 !important; /* Soft royal blue border */
+}
+[class*="bg-teal-500"],
+[class*="bg-teal-600"] {
+  background-color: hsl(var(--secondary)) !important;
+}
+[class*="bg-cyan-800"],
+[class*="bg-cyan-900"] {
+  background-color: hsl(var(--primary)) !important;
+}
+
+/* Standard blue gradients mapped to Royal -> Indigo gradient */
+[class*="bg-gradient-to-r"][class*="from-blue-500"][class*="to-indigo-600"] {
+  background: linear-gradient(135deg, #CD1C18 0%, #9B1313 100%) !important;
+  border: none !important;
+}
+[class*="bg-gradient-to-br"][class*="from-cyan-700"][class*="to-teal-500"] {
+  background: linear-gradient(135deg, #FFA896 0%, #CD1C18 100%) !important;
+}
+[class*="from-cyan-700"][class*="to-teal-600"] {
+  background: linear-gradient(135deg, #9B1313 0%, #CD1C18 100%) !important;
+}
+[class*="from-blue-500/10"][class*="to-indigo-600/10"] {
+  background: linear-gradient(135deg, rgba(205,28,24,0.08) 0%, rgba(155,19,19,0.08) 100%) !important;
+}
+[class*="from-indigo-500/10"][class*="to-purple-500/10"] {
+  background: linear-gradient(135deg, rgba(205,28,24,0.08) 0%, rgba(255,168,150,0.1) 100%) !important;
+}
+
+/* State tags overrides */
+/* Low Budget (Emerald) -> Ocean Mint/Teal */
+[class*="bg-green-400/10"],
+[class*="bg-emerald-50"] {
+  background-color: rgba(70, 138, 134, 0.08) !important;
+}
+[class*="text-green-400"],
+[class*="text-emerald-700"] {
+  color: #468A86 !important;
+}
+[class*="border-green-400/20"],
+[class*="border-emerald-300"] {
+  border-color: rgba(70, 138, 134, 0.2) !important;
+}
+
+/* Medium Budget (Yellow/Amber) -> Gold */
+[class*="bg-yellow-400/10"],
+[class*="bg-amber-50"] {
+  background-color: rgba(196, 146, 43, 0.08) !important;
+}
+[class*="text-yellow-400"],
+[class*="text-amber-800"] {
+  color: #C4922B !important;
+}
+[class*="border-yellow-400/20"],
+[class*="border-amber-300"] {
+  border-color: rgba(196, 146, 43, 0.2) !important;
+}
+
+/* High Budget / Shared status (Purple/Violet) -> Deep Indigo */
+[class*="bg-purple-400/10"],
+[class*="bg-purple-500/10"],
+[class*="bg-cyan-50"] {
+  background-color: rgba(41, 54, 129, 0.08) !important;
+}
+[class*="text-purple-400"],
+[class*="text-purple-500"],
+[class*="text-cyan-800"] {
+  color: #293681 !important;
+}
+[class*="border-purple-400/20"],
+[class*="border-cyan-300"] {
+  border-color: rgba(41, 54, 129, 0.2) !important;
+}
+
+/* Generated status (Blue) -> Ice Blue */
+[class*="bg-blue-400/10"],
+[class*="bg-blue-500/10"] {
+  background-color: rgba(149, 204, 221, 0.12) !important;
+}
+[class*="text-blue-400"] {
+  color: #3b8da7 !important;
+}
+[class*="border-blue-400/20"] {
+  border-color: rgba(149, 204, 221, 0.3) !important;
+}
+
+/* Modified status (Orange) -> Vibrant Sky Blue */
+[class*="bg-orange-400/10"] {
+  background-color: rgba(66, 116, 217, 0.08) !important;
+}
+[class*="text-orange-400"] {
+  color: #4274D9 !important;
+}
+[class*="border-orange-400/20"] {
+  border-color: rgba(66, 116, 217, 0.2) !important;
+}
+
+/* Card overrides for beautiful premium feel */
+[class*="bg-slate-900/50"][class*="border-slate-800"],
+[class*="bg-white"][class*="border-stone-200"] {
+  background-color: #ffffff !important;
+  border-color: #c6dfde !important;
+  box-shadow: 0 10px 30px -10px rgba(41, 54, 129, 0.05) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+[class*="bg-slate-900/50"][class*="border-slate-800"]:hover,
+[class*="bg-white"][class*="border-stone-200"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(41, 54, 129, 0.12) !important;
+  border-color: #95CCDD !important;
+}
+
+/* Polished primary button utility for consistent CTAs */
+.btn-primary {
+   background: linear-gradient(135deg, #CD1C18 0%, #9B1313 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 8px 20px -6px rgba(41, 54, 129, 0.3) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -6px rgba(41, 54, 129, 0.45) !important;
+}
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-outline {
+  background: transparent;
+  color: hsl(var(--primary));
+  border: 1px solid color-mix(in srgb, hsl(var(--primary)) 40%, black 6%);
+}
+
+/* Precise Tailwind Utility Class Overrides for Global Theme Re-skin */
+
+/* Gradients */
+.from-blue-500 {
+  --tw-gradient-from: #CD1C18 !important;
+  --tw-gradient-to: rgba(66, 116, 217, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-indigo-600 {
+  --tw-gradient-to: #9B1313 !important;
+}
+
+.from-cyan-700 {
+  --tw-gradient-from: #FFA896 !important;
+  --tw-gradient-to: rgba(149, 204, 221, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.to-teal-500,
+.to-teal-600 {
+  --tw-gradient-to: #CD1C18 !important;
+}
+
+/* Background gradient from-slate-950 via-slate-900 to-slate-950 (Auth Screens) */
+.from-slate-950 {
+  --tw-gradient-from: #FFF7F6 !important;
+  --tw-gradient-to: rgba(236, 239, 244, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.via-slate-900 {
+  --tw-gradient-to: #FFECE8 !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #D8E3ED, var(--tw-gradient-to) !important;
+}
+
+/* Indigo overrides */
+.text-indigo-400,
+.text-indigo-500,
+.text-indigo-600 {
+  color: #CD1C18 !important;
+}
+
+.bg-indigo-500,
+.bg-indigo-600 {
+  background-color: #CD1C18 !important;
+}
+
+.hover\:bg-indigo-600:hover,
+.hover\:bg-indigo-700:hover {
+  background-color: #9B1313 !important;
+}
+
+.border-indigo-500,
+.border-indigo-300 {
+  border-color: #CD1C18 !important;
+}
+
+.bg-indigo-500\/10 {
+  background-color: rgba(205,28,24,0.08) !important;
+}
+
+.hover\:bg-indigo-500\/20:hover {
+  background-color: rgba(205,28,24,0.16) !important;
+}
+
+/* Cyan/Teal overrides */
+.text-cyan-800,
+.text-cyan-700 {
+  color: #293681 !important;
+}
+
+.text-teal-600,
+.text-teal-700 {
+  color: #4274D9 !important;
+}
+
+.bg-teal-50 {
+  background-color: #EBF3FC !important;
+}
+
+.border-teal-200,
+.border-teal-300 {
+  border-color: #C5DCF8 !important;
+}
+
+.bg-teal-500,
+.bg-teal-600 {
+  background-color: #4274D9 !important;
+}
+
+.bg-cyan-800,
+.bg-cyan-900 {
+  background-color: #293681 !important;
+}
+
+.hover\:bg-cyan-900:hover {
+  background-color: #1D265B !important;
+}
+
+/* Shadow Indigo 500 override */
+.hover\:shadow-indigo-500\/25:hover {
+  --tw-shadow-color: rgba(41, 54, 129, 0.25) !important;
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+

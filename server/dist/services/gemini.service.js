@@ -1,0 +1,454 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeminiService = void 0;
+const generative_ai_1 = require("@google/generative-ai");
+const logger_1 = require("../utils/logger");
+const errors_1 = require("../utils/errors");
+class GeminiService {
+    static instance;
+    model;
+    retryConfig = {
+        maxRetries: 5,
+        initialDelay: 1000,
+        maxDelay: 16000,
+    };
+    constructor() {
+        const apiKey = process.env.GEMINI_API_KEY;
+        if (!apiKey) {
+            throw new Error('GEMINI_API_KEY is not defined in environment variables');
+        }
+        const genAI = new generative_ai_1.GoogleGenerativeAI(apiKey);
+        this.model = genAI.getGenerativeModel({
+            model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+            generationConfig: this.getGenerationConfig(),
+            safetySettings: this.getSafetySettings(),
+        });
+        logger_1.logger.info('Gemini API service initialized');
+    }
+    static getInstance() {
+        if (!GeminiService.instance) {
+            GeminiService.instance = new GeminiService();
+        }
+        return GeminiService.instance;
+    }
+    getGenerationConfig() {
+        return {
+            temperature: 0.7,
+            topK: 1,
+            topP: 0.95,
+            maxOutputTokens: 16384,
+            responseMimeType: 'application/json',
+        };
+    }
+    getSafetySettings() {
+        return [
+            {
+                category: 'HARM_CATEGORY_HARASSMENT',
+                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+            },
+            {
+                category: 'HARM_CATEGORY_HATE_SPEECH',
+                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+            },
+            {
+                category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
+                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+            },
+            {
+                category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
+                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+            },
+        ];
+    }
+    async fetchWithRetry(prompt, retries = this.retryConfig.maxRetries, delay = this.retryConfig.initialDelay) {
+        try {
+            const result = await this.model.generateContent(prompt);
+            const response = await result.response;
+            const text = response.text();
+            if (!text) {
+                throw new errors_1.AppError('Empty response from AI service', 500);
+            }
+            try {
+                const parsed = JSON.parse(this.normalizeJsonResponse(text));
+                return this.normalizeAIResponse(parsed);
+            }
+            catch (parseError) {
+                logger_1.logger.error('Failed to parse AI response:', {
+                    preview: text.slice(0, 1000),
+                    responseLength: text.length,
+                    error: parseError,
+                });
+                throw new errors_1.AppError('Invalid response format from AI service', 500);
+            }
+        }
+        catch (error) {
+            logger_1.logger.error('Gemini API error:', { error: error.message, retries });
+            if (retries > 0 && this.shouldRetry(error)) {
+                const nextDelay = Math.min(delay * 2, this.retryConfig.maxDelay);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                return this.fetchWithRetry(prompt, retries - 1, nextDelay);
+            }
+            throw error;
+        }
+    }
+    shouldRetry(error) {
+        return error.status === 429 || error.status >= 500;
+    }
+    normalizeJsonResponse(text) {
+        const trimmed = text.trim();
+        const fencedMatch = trimmed.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/);
+        return fencedMatch ? fencedMatch[1].trim() : trimmed;
+    }
+    normalizeAIResponse(response) {
+        if (Array.isArray(response)) {
+            return this.normalizePackingItems(response);
+        }
+        if (Array.isArray(response.itinerary)) {
+            response.itinerary = response.itinerary.map(day => ({
+                ...day,
+                activities: Array.isArray(day.activities)
+                    ? day.activities.map(activity => ({
+                        ...activity,
+                        timeOfDay: this.normalizeTimeOfDay(activity.timeOfDay),
+                    }))
+                    : [],
+            }));
+        }
+        if (Array.isArray(response.hotels)) {
+            response.hotels = response.hotels.map(hotel => ({
+                ...hotel,
+                tier: this.normalizeHotelTier(hotel.tier),
+                amenities: Array.isArray(hotel.amenities) ? hotel.amenities : [],
+            }));
+        }
+        if (response.estimatedBudget) {
+            response.estimatedBudget = {
+                transport: Number(response.estimatedBudget.transport) || 0,
+                accommodation: Number(response.estimatedBudget.accommodation) || 0,
+                food: Number(response.estimatedBudget.food) || 0,
+                activities: Number(response.estimatedBudget.activities) || 0,
+                miscellaneous: Number(response.estimatedBudget.miscellaneous) || 0,
+                total: Number(response.estimatedBudget.total) || 0,
+                currency: 'INR',
+            };
+        }
+        if (Array.isArray(response.packingList)) {
+            response.packingList = this.normalizePackingItems(response.packingList);
+        }
+        return response;
+    }
+    normalizePackingItems(items) {
+        return items
+            .filter(item => item && typeof item === 'object')
+            .map(item => ({
+            ...item,
+            item: String(item.item || '').trim(),
+            category: this.normalizePackingCategory(item.category),
+            isPacked: Boolean(item.isPacked),
+            quantity: Number(item.quantity) > 0 ? Number(item.quantity) : 1,
+            notes: String(item.notes || '').trim(),
+        }))
+            .filter(item => item.item.length > 0);
+    }
+    normalizeTimeOfDay(value) {
+        const text = String(value || '').toLowerCase();
+        if (text.includes('morning'))
+            return 'Morning';
+        if (text.includes('afternoon') || text.includes('noon'))
+            return 'Afternoon';
+        if (text.includes('evening') || text.includes('night'))
+            return 'Evening';
+        return 'Morning';
+    }
+    normalizeHotelTier(value) {
+        const text = String(value || '').toLowerCase();
+        if (text.includes('lux'))
+            return 'Luxury';
+        if (text.includes('mid') || text.includes('standard') || text.includes('comfort'))
+            return 'Mid-Range';
+        return 'Budget';
+    }
+    normalizePackingCategory(value) {
+        const text = String(value || '').toLowerCase();
+        if (text.includes('document'))
+            return 'Documents';
+        if (text.includes('cloth') || text.includes('wear'))
+            return 'Clothing';
+        if (text.includes('gear') || text.includes('bag'))
+            return 'Gear';
+        if (text.includes('elect'))
+            return 'Electronics';
+        if (text.includes('health') || text.includes('med'))
+            return 'Health';
+        return 'Other';
+    }
+    async generateTripPlan(input) {
+        const prompt = this.buildTripPrompt(input);
+        logger_1.logger.info('Generating trip plan with prompt length:', prompt.length);
+        try {
+            const response = await this.fetchWithRetry(prompt);
+            if (Array.isArray(response)) {
+                throw new errors_1.AppError('Invalid trip plan response from AI service', 500);
+            }
+            return response;
+        }
+        catch (error) {
+            logger_1.logger.error('Failed to generate trip plan:', error);
+            throw new errors_1.AppError('Failed to generate trip plan. Please try again.', 500);
+        }
+    }
+    async regenerateSpecificDay(tripContext, dayNumber, userFeedback) {
+        const prompt = this.buildDayRegenerationPrompt(tripContext, dayNumber, userFeedback);
+        logger_1.logger.info('Regenerating day:', { dayNumber, userFeedback });
+        try {
+            const response = await this.fetchWithRetry(prompt);
+            if (Array.isArray(response)) {
+                throw new errors_1.AppError('Invalid day regeneration response from AI service', 500);
+            }
+            return response;
+        }
+        catch (error) {
+            logger_1.logger.error('Failed to regenerate day:', error);
+            throw new errors_1.AppError('Failed to regenerate day. Please try again.', 500);
+        }
+    }
+    async generatePackingList(tripContext) {
+        const prompt = this.buildPackingListPrompt(tripContext);
+        logger_1.logger.info('Generating packing list');
+        try {
+            const response = await this.fetchWithRetry(prompt);
+            return Array.isArray(response) ? response : response.packingList || [];
+        }
+        catch (error) {
+            logger_1.logger.error('Failed to generate packing list:', error);
+            throw new errors_1.AppError('Failed to generate packing list. Please try again.', 500);
+        }
+    }
+    buildTripPrompt(input) {
+        const { destination, durationDays, budgetTier, interests } = input;
+        const interestsStr = interests.length > 0 ? interests.join(', ') : 'general exploration';
+        const budgetGuidelines = this.getBudgetGuidelines(budgetTier);
+        return `You are an expert travel planner specializing in India travel itineraries. Generate a detailed ${durationDays}-day travel plan for ${destination}, India.
+
+**User Preferences:**
+- Destination: ${destination}, India
+- Duration: ${durationDays} days
+- Budget Level: ${budgetTier} (${budgetGuidelines.description})
+- Interests: ${interestsStr}
+
+**Important Guidelines:**
+1. All costs must be in Indian Rupees (INR)
+2. Focus on authentic Indian experiences
+3. Consider local transportation (auto-rickshaw, metro, etc.)
+4. Include diverse culinary experiences
+5. ${budgetGuidelines.specifics}
+
+**Budget Guidelines (INR):**
+${budgetGuidelines.details}
+
+**Required JSON Structure:**
+{
+  "itinerary": [
+    {
+      "dayNumber": 1,
+      "title": "Day title (e.g., 'Exploring Old Delhi')",
+      "activities": [
+        {
+          "title": "Activity name",
+          "description": "Detailed description",
+          "estimatedCostINR": 0,
+          "timeOfDay": "Morning | Afternoon | Evening",
+          "location": "Specific location in Delhi",
+          "duration": "2 hours"
+        }
+      ]
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Hotel name",
+      "tier": "Budget | Mid-Range | Luxury",
+      "estimatedCostNightINR": 0,
+      "rating": "4.5/5",
+      "location": "Area in Delhi",
+      "amenities": ["Free WiFi", "Breakfast included", "Air conditioning"]
+    }
+  ],
+  "estimatedBudget": {
+    "transport": 0,
+    "accommodation": 0,
+    "food": 0,
+    "activities": 0,
+    "miscellaneous": 0,
+    "total": 0,
+    "currency": "INR"
+  },
+  "packingList": [
+    {
+      "item": "Item name",
+      "category": "Documents | Clothing | Gear | Electronics | Health | Other",
+      "isPacked": false,
+      "quantity": 1,
+      "notes": "Additional notes"
+    }
+  ]
+}
+
+**Important Notes:**
+- Provide at least 3-4 activities per day
+- Include specific locations, times, and realistic prices
+- Consider weather conditions for the season
+- Include both popular and offbeat experiences
+- Ensure activities are logistically feasible
+- For Delhi: include Red Fort, India Gate, Qutub Minar, Chandni Chowk, Humayun's Tomb, Lotus Temple, etc.
+- Include authentic food experiences
+- Provide practical tips for travelers
+
+Return ONLY valid JSON matching the structure above. No additional text or markdown.`;
+    }
+    getBudgetGuidelines(tier) {
+        const guidelines = {
+            Low: {
+                description: 'Budget-friendly travel',
+                specifics: 'Focus on budget accommodations, street food, public transport',
+                details: `- Daily budget: ₹1000-₹2000
+- Accommodation: ₹500-₹1000 per night (hostels, budget hotels)
+- Food: ₹200-₹400 per day (street food, local dhabas)
+- Transport: ₹100-₹200 per day (metro, bus, shared auto)
+- Activities: ₹100-₹300 per day (free attractions, budget tours)`
+            },
+            Medium: {
+                description: 'Comfortable mid-range travel',
+                specifics: 'Balance between cost and comfort, mid-range hotels, some fine dining',
+                details: `- Daily budget: ₹2000-₹5000
+- Accommodation: ₹1500-₹3000 per night (3-star hotels, boutique stays)
+- Food: ₹500-₹1000 per day (restaurants, some fine dining)
+- Transport: ₹200-₹500 per day (metro, cabs, private auto)
+- Activities: ₹200-₹600 per day (guided tours, attraction tickets)`
+            },
+            High: {
+                description: 'Luxury travel experience',
+                specifics: 'Premium hotels, fine dining, private transport, exclusive experiences',
+                details: `- Daily budget: ₹5000-₹15000
+- Accommodation: ₹5000-₹10000 per night (5-star hotels, heritage properties)
+- Food: ₹1500-₹3000 per day (fine dining, premium restaurants)
+- Transport: ₹500-₹1000 per day (private driver, premium cabs)
+- Activities: ₹500-₹1500 per day (exclusive tours, VIP experiences)`
+            }
+        };
+        return guidelines[tier] || guidelines.Medium;
+    }
+    buildDayRegenerationPrompt(tripContext, dayNumber, feedback) {
+        return `You are an expert travel planner. Regenerate Day ${dayNumber} for this trip with the following feedback: "${feedback}"
+
+Current Trip Context:
+- Destination: ${tripContext.destination}
+- Duration: ${tripContext.durationDays} days
+- Budget Tier: ${tripContext.budgetTier}
+- Interests: ${tripContext.interests.join(', ')}
+
+Current Full Itinerary:
+${JSON.stringify(tripContext.itinerary, null, 2)}
+
+**Requirements:**
+1. Keep the rest of the itinerary unchanged
+2. Only modify Day ${dayNumber} based on the feedback
+3. Maintain consistency with the trip's overall theme and budget
+4. All costs in INR
+5. Focus on Delhi/India-specific experiences
+
+Return ONLY the updated Day ${dayNumber} as JSON:
+{
+  "dayNumber": ${dayNumber},
+  "title": "New day title",
+  "activities": [
+    {
+      "title": "Activity name",
+      "description": "Detailed description",
+      "estimatedCostINR": 0,
+      "timeOfDay": "Morning | Afternoon | Evening",
+      "location": "Specific location",
+      "duration": "2 hours"
+    }
+  ]
+}`;
+    }
+    buildPackingListPrompt(tripContext) {
+        return `You are a smart packing assistant specialized for India travel. Generate a comprehensive packing list for this trip.
+
+**Trip Details:**
+- Destination: ${tripContext.destination}, India
+- Duration: ${tripContext.durationDays} days
+- Season: ${this.getSeason()}
+- Activities: ${tripContext.interests.join(', ')}
+
+**Weather Context for ${tripContext.destination}, India:**
+${this.getWeatherContext(tripContext.destination)}
+
+**Required JSON Array of Packing Items:**
+[
+  {
+    "item": "Item name (e.g., 'Passport')",
+    "category": "Documents | Clothing | Gear | Electronics | Health | Other",
+    "isPacked": false,
+    "quantity": 1,
+    "notes": "Specific note for this item"
+  }
+]
+
+**Categories to Include:**
+1. Documents: Passport, Visa, Travel Insurance, Flight Tickets, Hotel Vouchers
+2. Clothing: Weather-appropriate clothes, Traditional wear for temple visits
+3. Gear: Backpack, Day bag, Walking shoes, Power bank
+4. Electronics: Phone, Camera, Chargers, Adapter
+5. Health: Medicines, First aid kit, Sanitizer, Sunscreen
+6. Other: Water bottle, Snacks, Guidebook, Umbrella
+
+**Special Considerations for India:**
+- Modest clothing for religious sites
+- Comfortable walking shoes for exploring
+- Scarf/dupatta for temples
+- Sun protection (high SPF)
+- Water purification tablets or bottled water
+- Anti-mosquito repellent
+
+Return ONLY valid JSON array. No additional text.`;
+    }
+    getSeason() {
+        const month = new Date().getMonth();
+        if (month >= 11 || month <= 1)
+            return 'Winter (November-February) - Cool and pleasant';
+        if (month >= 2 && month <= 4)
+            return 'Spring (March-April) - Warm and pleasant';
+        if (month >= 5 && month <= 6)
+            return 'Summer (May-June) - Hot and dry';
+        if (month >= 7 && month <= 9)
+            return 'Monsoon (July-September) - Rainy and humid';
+        return 'Autumn (October) - Pleasant with some rain';
+    }
+    getWeatherContext(destination) {
+        const season = this.getSeason();
+        const weatherMap = {
+            'Delhi': `Delhi experiences ${season}. 
+- Winter: 5-20°C, foggy mornings
+- Summer: 30-45°C, very hot
+- Monsoon: Heavy rainfall
+- Spring/Autumn: Pleasant 20-30°C`,
+            'Agra': `Agra experiences ${season}.
+- Winter: 5-18°C
+- Summer: 35-45°C
+- Monsoon: Moderate rainfall`,
+            'Jaipur': `Jaipur experiences ${season}.
+- Winter: 8-22°C
+- Summer: 30-45°C
+- Monsoon: Moderate rainfall`,
+            'Varanasi': `Varanasi experiences ${season}.
+- Winter: 5-20°C
+- Summer: 30-42°C
+- Monsoon: Heavy rainfall`
+        };
+        return weatherMap[destination] || `Standard weather conditions for ${destination}, India`;
+    }
+}
+exports.GeminiService = GeminiService;
+//# sourceMappingURL=gemini.service.js.map
