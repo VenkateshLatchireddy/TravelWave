@@ -1,6 +1,6 @@
 export declare class EmailService {
     private static instance;
-    private transporter;
+    private transporter?;
     private isConfigured;
     private constructor();
     private initializeTransporter;

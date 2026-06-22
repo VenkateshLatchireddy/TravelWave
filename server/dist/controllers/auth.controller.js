@@ -142,7 +142,7 @@ class AuthController {
             throw error;
         }
     };
-    logout = async (req, res) => {
+    logout = async (_req, res) => {
         try {
             res.status(200).json({
                 success: true,

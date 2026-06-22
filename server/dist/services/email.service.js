@@ -69,6 +69,10 @@ class EmailService {
             return;
         }
         try {
+            if (!this.transporter) {
+                logger_1.logger.warn('Email transporter is not configured. Skipping actual send.');
+                return;
+            }
             const from = process.env.SMTP_FROM || 'noreply@travelwave.ai';
             const recipients = Array.isArray(options.to) ? options.to.join(', ') : options.to;
             const mailOptions = {

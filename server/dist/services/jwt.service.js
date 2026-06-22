@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JWTService = void 0;
-const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const jsonwebtoken_1 = require("jsonwebtoken");
 const crypto_1 = __importDefault(require("crypto"));
 const errors_1 = require("../utils/errors");
 const logger_1 = require("../utils/logger");
@@ -28,13 +28,13 @@ class JWTService {
     }
     generateTokens(payload) {
         try {
-            const accessToken = jsonwebtoken_1.default.sign({
+            const accessToken = (0, jsonwebtoken_1.sign)({
                 userId: payload.userId,
                 email: payload.email,
                 firstName: payload.firstName,
-                lastName: payload.lastName
+                lastName: payload.lastName,
             }, this.accessTokenSecret, { expiresIn: this.accessTokenExpiry });
-            const refreshToken = jsonwebtoken_1.default.sign({ userId: payload.userId }, this.refreshTokenSecret, { expiresIn: this.refreshTokenExpiry });
+            const refreshToken = (0, jsonwebtoken_1.sign)({ userId: payload.userId }, this.refreshTokenSecret, { expiresIn: this.refreshTokenExpiry });
             const accessTokenExpires = new Date(Date.now() + 15 * 60 * 1000);
             const refreshTokenExpires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
             return {
@@ -51,7 +51,7 @@ class JWTService {
     }
     verifyAccessToken(token) {
         try {
-            const decoded = jsonwebtoken_1.default.verify(token, this.accessTokenSecret);
+            const decoded = (0, jsonwebtoken_1.verify)(token, this.accessTokenSecret);
             if (typeof decoded === 'string') {
                 throw new errors_1.AuthenticationError('Invalid token format');
             }
@@ -63,10 +63,10 @@ class JWTService {
             };
         }
         catch (error) {
-            if (error instanceof jsonwebtoken_1.default.TokenExpiredError) {
+            if (error instanceof jsonwebtoken_1.TokenExpiredError) {
                 throw new errors_1.AuthenticationError('Access token expired');
             }
-            if (error instanceof jsonwebtoken_1.default.JsonWebTokenError) {
+            if (error instanceof jsonwebtoken_1.JsonWebTokenError) {
                 throw new errors_1.AuthenticationError('Invalid access token');
             }
             throw error;
@@ -74,17 +74,17 @@ class JWTService {
     }
     verifyRefreshToken(token) {
         try {
-            const decoded = jsonwebtoken_1.default.verify(token, this.refreshTokenSecret);
+            const decoded = (0, jsonwebtoken_1.verify)(token, this.refreshTokenSecret);
             if (typeof decoded === 'string' || !decoded.userId) {
                 throw new errors_1.AuthenticationError('Invalid refresh token format');
             }
             return { userId: decoded.userId };
         }
         catch (error) {
-            if (error instanceof jsonwebtoken_1.default.TokenExpiredError) {
+            if (error instanceof jsonwebtoken_1.TokenExpiredError) {
                 throw new errors_1.AuthenticationError('Refresh token expired');
             }
-            if (error instanceof jsonwebtoken_1.default.JsonWebTokenError) {
+            if (error instanceof jsonwebtoken_1.JsonWebTokenError) {
                 throw new errors_1.AuthenticationError('Invalid refresh token');
             }
             throw error;

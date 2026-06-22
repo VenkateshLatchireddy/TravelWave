@@ -7,7 +7,7 @@ exports.errorHandler = void 0;
 const logger_1 = require("../utils/logger");
 const errors_1 = require("../utils/errors");
 const mongoose_1 = __importDefault(require("mongoose"));
-const errorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res, _next) => {
     logger_1.logger.error('Error occurred:', {
         error: err.message,
         stack: err.stack,

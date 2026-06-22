@@ -4,7 +4,7 @@ exports.validateRequest = void 0;
 const zod_1 = require("zod");
 const errors_1 = require("../utils/errors");
 const validateRequest = (schema) => {
-    return async (req, res, next) => {
+    return async (req, _res, next) => {
         try {
             const validatedData = await schema.parseAsync(req.body);
             req.body = validatedData;

@@ -47,7 +47,7 @@ const authMiddleware = async (req, res, next) => {
     }
 };
 exports.authMiddleware = authMiddleware;
-const authorize = (...roles) => {
+const authorize = (..._roles) => {
     return (req, res, next) => {
         if (!req.user) {
             res.status(401).json({

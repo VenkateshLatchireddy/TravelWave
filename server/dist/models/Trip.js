@@ -243,7 +243,7 @@ const TripSchema = new mongoose_1.Schema({
 }, {
     timestamps: true,
     toJSON: {
-        transform: (doc, ret) => {
+        transform: (_doc, ret) => {
             delete ret.__v;
             return ret;
         },

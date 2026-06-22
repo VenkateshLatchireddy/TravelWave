@@ -11,8 +11,8 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "ignoreDeprecations": "6.0",
     "allowSyntheticDefaultImports": true,
+    "types": ["node", "jest"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -27,5 +27,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["src/node_modules", "dist", "**/*.test.ts"]
+  "exclude": ["src/node_modules", "dist", "**/*.test.ts", "src/test"]
 }

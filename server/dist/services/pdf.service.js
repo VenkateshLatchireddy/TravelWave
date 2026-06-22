@@ -4,11 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PDFService = void 0;
-const html_pdf_1 = __importDefault(require("html-pdf"));
+const htmlPdf = require('html-pdf');
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 const logger_1 = require("../utils/logger");
 const errors_1 = require("../utils/errors");
 class PDFService {
     static instance;
+    logoDataUri;
     constructor() { }
     static getInstance() {
         if (!PDFService.instance) {
@@ -17,244 +20,724 @@ class PDFService {
         return PDFService.instance;
     }
     async generateTripPDF(trip) {
-        const formatCurrency = (amount) => {
-            return new Intl.NumberFormat('en-IN', {
-                style: 'currency',
-                currency: 'INR',
-                maximumFractionDigits: 0,
-            }).format(amount);
-        };
-        const getWeatherEmoji = (timeOfDay) => {
-            switch (timeOfDay) {
-                case 'Morning': return '🌅';
-                case 'Afternoon': return '☀️';
-                case 'Evening': return '🌅';
-                default: return '🌤️';
+        const logoDataUri = this.getLogoDataUri();
+        const fmt = (n) => new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 0,
+        }).format(Number(n) || 0);
+        const esc = (v) => String(v ?? '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+        const timeLabel = (t) => {
+            switch (t?.toLowerCase()) {
+                case 'morning': return 'Morning';
+                case 'afternoon': return 'Afternoon';
+                case 'evening': return 'Evening';
+                default: return t || '';
             }
         };
-        const html = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <meta charset="UTF-8">
-          <style>
-            * { margin: 0; padding: 0; box-sizing: border-box; }
-            body { font-family: 'Helvetica', 'Arial', sans-serif; background: white; color: #1e293b; padding: 40px; }
-            .container { max-width: 900px; margin: 0 auto; }
-            
-            /* Header */
-            .header { text-align: center; padding: 40px 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 30px; }
-            .logo { font-size: 36px; font-weight: bold; background: linear-gradient(135deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-            .subtitle { color: #64748b; font-size: 14px; margin-top: 4px; }
-            
-            /* Trip Info */
-            .trip-info { background: #f8fafc; border-radius: 12px; padding: 24px; margin-bottom: 30px; border: 1px solid #e2e8f0; }
-            .trip-info h1 { font-size: 28px; margin-bottom: 8px; }
-            .trip-info .meta { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 12px; }
-            .trip-info .meta span { color: #64748b; font-size: 14px; }
-            .trip-info .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-            .badge-low { background: #dcfce7; color: #166534; }
-            .badge-medium { background: #fef3c7; color: #92400e; }
-            .badge-high { background: #f3e8ff; color: #5b21b6; }
-            
-            /* Section */
-            .section { margin: 30px 0; }
-            .section-title { font-size: 22px; font-weight: bold; color: #1e293b; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
-            
-            /* Itinerary */
-            .day-card { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 16px; border: 1px solid #e2e8f0; }
-            .day-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-            .day-header h3 { font-size: 18px; color: #1e293b; }
-            .day-header .day-number { background: #6366f1; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; }
-            
-            .activity { padding: 12px; background: white; border-radius: 6px; margin-bottom: 8px; border: 1px solid #e2e8f0; }
-            .activity .title { font-weight: 600; color: #1e293b; }
-            .activity .description { color: #64748b; font-size: 14px; margin-top: 4px; }
-            .activity .meta { display: flex; gap: 16px; margin-top: 8px; font-size: 12px; color: #94a3b8; flex-wrap: wrap; }
-            .activity .cost { color: #6366f1; font-weight: 600; }
-            
-            /* Hotels */
-            .hotel-card { background: #f8fafc; border-radius: 8px; padding: 16px; margin-bottom: 12px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
-            .hotel-card .name { font-weight: 600; }
-            .hotel-card .details { color: #64748b; font-size: 14px; }
-            .hotel-card .price { color: #6366f1; font-weight: 600; }
-            
-            /* Budget */
-            .budget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-            .budget-item { background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; }
-            .budget-item .label { color: #64748b; font-size: 14px; }
-            .budget-item .value { font-size: 20px; font-weight: bold; color: #1e293b; margin-top: 4px; }
-            .budget-total { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; padding: 20px; border-radius: 12px; text-align: center; margin-top: 16px; }
-            .budget-total .label { font-size: 16px; opacity: 0.9; }
-            .budget-total .value { font-size: 32px; font-weight: bold; margin-top: 4px; }
-            
-            /* Packing */
-            .packing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-            .packing-item { display: flex; align-items: center; gap: 8px; padding: 8px; background: #f8fafc; border-radius: 4px; border: 1px solid #e2e8f0; }
-            .packing-item .checkbox { width: 16px; height: 16px; border: 2px solid #cbd5e1; border-radius: 4px; flex-shrink: 0; }
-            .packing-item .checked { background: #6366f1; border-color: #6366f1; position: relative; }
-            .packing-item .checked::after { content: '✓'; color: white; font-size: 12px; display: flex; align-items: center; justify-content: center; }
-            .packing-item .name { font-size: 14px; }
-            .packing-item .packed { color: #94a3b8; text-decoration: line-through; }
-            .packing-item .category { font-size: 11px; color: #94a3b8; margin-left: 4px; }
-            
-            /* Footer */
-            .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #94a3b8; font-size: 14px; }
-            
-            @media print {
-              body { padding: 20px; }
-              .day-card { break-inside: avoid; }
-              .hotel-card { break-inside: avoid; }
+        const timeColor = (t) => {
+            switch (t?.toLowerCase()) {
+                case 'morning': return '#D97706';
+                case 'afternoon': return '#059669';
+                case 'evening': return '#7C3AED';
+                default: return '#6B7280';
             }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <!-- Header -->
-            <div class="header">
-              <div class="logo">🧭 TravelWave</div>
-              <div class="subtitle">AI-Powered Travel Itinerary</div>
-            </div>
-
-            <!-- Trip Info -->
-            <div class="trip-info">
-              <h1>${trip.destination}</h1>
-              <div class="meta">
-                <span>📅 ${trip.durationDays} days</span>
-                <span><span class="badge badge-${trip.budgetTier.toLowerCase()}">${trip.budgetTier} Budget</span></span>
-                <span>💰 ${formatCurrency(trip.estimatedBudget.total)} total</span>
-                <span>📊 ${trip.itinerary.length} days planned</span>
-              </div>
-              ${trip.interests?.length ? `<div style="margin-top: 12px; color: #64748b; font-size: 14px;">🎯 Interests: ${trip.interests.join(', ')}</div>` : ''}
-            </div>
-
-            <!-- Itinerary -->
-            <div class="section">
-              <h2 class="section-title">🗺️ Itinerary</h2>
-              ${trip.itinerary.map((day) => `
-                <div class="day-card">
-                  <div class="day-header">
-                    <h3>${day.title || `Day ${day.dayNumber}`}</h3>
-                    <div class="day-number">${day.dayNumber}</div>
-                  </div>
-                  ${day.activities.map((activity) => `
-                    <div class="activity">
-                      <div class="title">${getWeatherEmoji(activity.timeOfDay)} ${activity.title}</div>
-                      ${activity.description ? `<div class="description">${activity.description}</div>` : ''}
-                      <div class="meta">
-                        ${activity.timeOfDay ? `<span>⏰ ${activity.timeOfDay}</span>` : ''}
-                        ${activity.location ? `<span>📍 ${activity.location}</span>` : ''}
-                        ${activity.duration ? `<span>⏱️ ${activity.duration}</span>` : ''}
-                        <span class="cost">${formatCurrency(activity.estimatedCostINR)}</span>
-                      </div>
-                    </div>
-                  `).join('')}
-                </div>
-              `).join('')}
-            </div>
-
-            <!-- Hotels -->
-            ${trip.hotels?.length ? `
-              <div class="section">
-                <h2 class="section-title">🏨 Recommended Hotels</h2>
-                ${trip.hotels.map((hotel) => `
-                  <div class="hotel-card">
-                    <div>
-                      <div class="name">${hotel.name}</div>
-                      <div class="details">
-                        ${hotel.location || ''} 
-                        ${hotel.rating ? `• ⭐ ${hotel.rating}` : ''}
-                        ${hotel.tier ? `• ${hotel.tier}` : ''}
-                      </div>
-                    </div>
-                    <div class="price">${formatCurrency(hotel.estimatedCostNightINR)}/night</div>
-                  </div>
-                `).join('')}
-              </div>
-            ` : ''}
-
-            <!-- Budget -->
-            <div class="section">
-              <h2 class="section-title">💰 Budget Breakdown</h2>
-              <div class="budget-grid">
-                ${[
-            { label: 'Transport', value: trip.estimatedBudget.transport },
+        };
+        const tierColor = (tier) => {
+            switch (tier?.toLowerCase()) {
+                case 'budget': return '#059669';
+                case 'mid-range': return '#D97706';
+                case 'luxury': return '#7C3AED';
+                default: return '#6B7280';
+            }
+        };
+        const catIcon = (cat) => {
+            const m = {
+                documents: '📄', clothing: '👕', gear: '🎒',
+                electronics: '📱', health: '💊', other: '📌',
+            };
+            return m[cat?.toLowerCase()] || '•';
+        };
+        const totalActivities = trip.itinerary.reduce((a, d) => a + (d.activities?.length || 0), 0);
+        const totalItems = trip.packingList?.length || 0;
+        const packedItems = trip.packingList?.filter((i) => i.isPacked).length || 0;
+        const packPct = totalItems > 0 ? Math.round((packedItems / totalItems) * 100) : 0;
+        const perDay = trip.durationDays > 0
+            ? trip.estimatedBudget.total / trip.durationDays
+            : trip.estimatedBudget.total;
+        const totalBudget = trip.estimatedBudget.total || 1;
+        const budgetRows = [
+            { label: 'Transportation', value: trip.estimatedBudget.transport },
             { label: 'Accommodation', value: trip.estimatedBudget.accommodation },
-            { label: 'Food', value: trip.estimatedBudget.food },
+            { label: 'Food & Dining', value: trip.estimatedBudget.food },
             { label: 'Activities', value: trip.estimatedBudget.activities },
             { label: 'Miscellaneous', value: trip.estimatedBudget.miscellaneous },
-        ].map(item => `
-                  <div class="budget-item">
-                    <div class="label">${item.label}</div>
-                    <div class="value">${formatCurrency(item.value)}</div>
-                  </div>
-                `).join('')}
-              </div>
-              <div class="budget-total">
-                <div class="label">Total Estimated Budget</div>
-                <div class="value">${formatCurrency(trip.estimatedBudget.total)}</div>
-                <div style="font-size: 14px; opacity: 0.8; margin-top: 4px;">${trip.durationDays} days • ${formatCurrency(trip.estimatedBudget.total / trip.durationDays)} per day</div>
-              </div>
+        ];
+        const date = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+        const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${esc(trip.destination)} — TravelWave</title>
+  <style>
+    *, *:before, *:after { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 11pt;
+      color: #1C1917;
+      background: #FFFFFF;
+      line-height: 1.65;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────────── */
+    .header {
+      padding: 0;
+      position: relative;
+    }
+    .header-stripe {
+      height: 6px;
+      background: #1C4532;
+    }
+    .header-body {
+      padding: 44px 56px 36px;
+      border-bottom: 1px solid #E7E5E4;
+      position: relative;
+    }
+    .header-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #A8926A;
+      margin-bottom: 14px;
+    }
+    .header-dest {
+      font-size: 46pt;
+      font-weight: bold;
+      color: #1C1917;
+      line-height: 0.95;
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
+    }
+    .header-dest em {
+      color: #1C4532;
+      font-style: normal;
+    }
+    .header-meta {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      color: #78716C;
+      margin-bottom: 28px;
+    }
+    .header-pills {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .header-pill {
+      display: inline-block;
+      border: 1px solid #D6D3D1;
+      padding: 4px 14px;
+      border-radius: 2px;
+      font-size: 8.5pt;
+      color: #57534E;
+      margin-right: 8px;
+      margin-bottom: 4px;
+    }
+    .header-pill.accent {
+      background: #1C4532;
+      border-color: #1C4532;
+      color: white;
+    }
+    .header-brand {
+      position: absolute;
+      top: 44px; right: 56px;
+      text-align: right;
+    }
+    .header-brand img { width: 38px; height: 38px; object-fit: contain; margin-bottom: 4px; display: block; margin-left: auto; }
+    .header-brand-name {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      font-weight: bold;
+      color: #1C4532;
+      letter-spacing: -0.3px;
+    }
+    .header-brand-name span { color: #A8926A; }
+
+    /* ─── STATS BAND ─────────────────────────────────────── */
+    .stats-band {
+      background: #F7F3EE;
+      border-bottom: 1px solid #E7E5E4;
+      padding: 0 56px;
+    }
+    .stats-band table { width: 100%; border-collapse: collapse; }
+    .stats-band td {
+      padding: 18px 0;
+      text-align: center;
+      border-right: 1px solid #E7E5E4;
+    }
+    .stats-band td:first-child { text-align: left; }
+    .stats-band td:last-child  { border-right: none; text-align: right; }
+    .stat-number {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22pt;
+      font-weight: bold;
+      color: #1C4532;
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.5pt;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #A8A29E;
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* ─── BODY ───────────────────────────────────────────── */
+    .body { padding: 44px 56px; }
+
+    /* ─── SECTION ────────────────────────────────────────── */
+    .section { margin-bottom: 48px; }
+    .section-head {
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1C1917;
+    }
+    .section-head-row { width: 100%; }
+    .section-head-row td { vertical-align: baseline; }
+    .section-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #1C4532;
+      font-weight: bold;
+    }
+    .section-sub {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      color: #A8A29E;
+      text-align: right;
+    }
+
+    /* ─── ITINERARY ──────────────────────────────────────── */
+    .day-block { margin-bottom: 32px; page-break-inside: avoid; }
+    .day-header-row { margin-bottom: 14px; }
+    .day-num-box {
+      display: inline-block;
+      background: #1C1917;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.5pt;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .day-title {
+      font-size: 15pt;
+      font-weight: bold;
+      color: #1C1917;
+      letter-spacing: -0.3px;
+      vertical-align: middle;
+    }
+
+    .activity-item {
+      padding: 12px 0 12px 20px;
+      border-left: 2px solid #E7E5E4;
+      margin-left: 6px;
+      margin-bottom: 2px;
+      position: relative;
+      page-break-inside: avoid;
+    }
+    .activity-dot {
+      position: absolute;
+      left: -5px;
+      top: 18px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #A8926A;
+    }
+    .activity-top { margin-bottom: 3px; }
+    .activity-time-tag {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.5pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 1px 7px;
+      border-radius: 2px;
+      color: white;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .activity-name {
+      font-size: 11.5pt;
+      font-weight: bold;
+      color: #1C1917;
+      vertical-align: middle;
+    }
+    .activity-cost {
+      float: right;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #1C4532;
+    }
+    .activity-desc {
+      font-size: 9.5pt;
+      color: #78716C;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .activity-info {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      color: #A8A29E;
+      margin-top: 5px;
+    }
+    .activity-info span { margin-right: 14px; }
+
+    /* ─── HOTELS ─────────────────────────────────────────── */
+    .hotels-table { width: 100%; border-collapse: collapse; }
+    .hotels-table tr { border-bottom: 1px solid #F5F5F4; }
+    .hotels-table tr:last-child { border-bottom: none; }
+    .hotels-table td { padding: 14px 8px; vertical-align: top; }
+    .hotels-table td:first-child { padding-left: 0; width: 55%; }
+    .hotels-table td:last-child  { padding-right: 0; text-align: right; }
+    .hotel-name {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1C1917;
+      margin-bottom: 4px;
+    }
+    .hotel-tier-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .hotel-tier-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+    }
+    .hotel-detail {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      color: #78716C;
+      margin-top: 3px;
+    }
+    .hotel-amenities-line {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      color: #A8A29E;
+      margin-top: 5px;
+    }
+    .hotel-price {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16pt;
+      font-weight: bold;
+      color: #1C4532;
+      line-height: 1;
+    }
+    .hotel-price-unit {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      color: #A8A29E;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ─── BUDGET ─────────────────────────────────────────── */
+    .budget-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    .budget-table tr { border-bottom: 1px solid #F5F5F4; }
+    .budget-table td { padding: 11px 0; vertical-align: middle; }
+    .budget-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      color: #44403C;
+      width: 36%;
+    }
+    .budget-bar-cell { width: 42%; padding: 11px 16px; }
+    .budget-track {
+      background: #F5F5F4;
+      height: 5px;
+      border-radius: 3px;
+    }
+    .budget-fill {
+      height: 5px;
+      border-radius: 3px;
+      background: #A8926A;
+    }
+    .budget-value {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #1C1917;
+      text-align: right;
+    }
+    .budget-total-row {
+      background: #1C4532;
+    }
+    .budget-total-row td {
+      padding: 16px 20px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      border-bottom: none !important;
+    }
+    .budget-total-label { font-size: 9pt; opacity: 0.75; display: block; margin-bottom: 2px; }
+    .budget-total-amount { font-size: 20pt; font-weight: bold; line-height: 1; }
+    .budget-perday { text-align: right; }
+    .budget-perday-amount { font-size: 14pt; font-weight: bold; color: #A8E6C4; }
+    .budget-perday-label { font-size: 8pt; opacity: 0.65; display: block; margin-top: 2px; }
+
+    /* ─── PACKING ────────────────────────────────────────── */
+    .packing-progress-row {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8.5pt;
+      color: #78716C;
+      margin-bottom: 6px;
+    }
+    .packing-track { background: #F5F5F4; height: 4px; border-radius: 3px; margin-bottom: 20px; }
+    .packing-fill  { height: 4px; border-radius: 3px; background: #1C4532; }
+
+    .packing-cols-table { width: 100%; border-collapse: collapse; vertical-align: top; }
+    .packing-cols-table td { width: 50%; vertical-align: top; padding-right: 24px; }
+    .packing-cols-table td:last-child { padding-right: 0; }
+    .packing-entry {
+      padding: 8px 0;
+      border-bottom: 1px solid #F5F5F4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9.5pt;
+      color: #44403C;
+    }
+    .packing-entry.packed { color: #C4B8AE; text-decoration: line-through; }
+    .packing-check-box {
+      display: inline-block;
+      width: 11px; height: 11px;
+      border: 1.5px solid #C4B8AE;
+      border-radius: 2px;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .packing-check-done {
+      display: inline-block;
+      width: 11px; height: 11px;
+      background: #1C4532;
+      border-radius: 2px;
+      margin-right: 8px;
+      vertical-align: middle;
+      font-size: 7pt;
+      color: white;
+      text-align: center;
+      line-height: 11px;
+    }
+    .packing-cat-icon { margin-right: 4px; }
+    .packing-qty {
+      float: right;
+      font-size: 8pt;
+      color: #A8A29E;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      background: #1C1917;
+      padding: 20px 56px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 8pt;
+      color: #78716C;
+    }
+    .footer-table { width: 100%; border-collapse: collapse; }
+    .footer-table td { vertical-align: middle; }
+    .footer-brand { color: #FFFFFF; font-weight: bold; font-size: 10pt; }
+    .footer-brand span { color: #A8926A; }
+    .footer-right { text-align: right; }
+
+    /* ─── PRINT ──────────────────────────────────────────── */
+    @media print {
+      .header-stripe { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .stats-band { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .day-num-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .activity-time-tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .budget-total-row { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .budget-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .packing-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .packing-check-done { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══════════════════════════════════════════ -->
+<div class="header">
+  <div class="header-stripe"></div>
+  <div class="header-body">
+    <div class="header-brand">
+      ${logoDataUri ? `<img src="${logoDataUri}" alt="TravelWave">` : ''}
+      <div class="header-brand-name">Travel<span>Wave</span></div>
+    </div>
+    <div class="header-label">Travel Itinerary &nbsp;&bull;&nbsp; AI-Generated</div>
+    <div class="header-dest">${esc(trip.destination)}</div>
+    <div class="header-meta">
+      ${trip.durationDays}-day journey &nbsp;&bull;&nbsp; ${esc(trip.budgetTier)} budget
+      &nbsp;&bull;&nbsp; ${totalActivities} curated experiences
+    </div>
+    <div class="header-pills">
+      <span class="header-pill accent">${fmt(trip.estimatedBudget.total)} total</span>
+      ${trip.interests?.slice(0, 4).map((i) => `<span class="header-pill">${esc(i)}</span>`).join('') || ''}
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STATS BAND ════════════════════════════════════════ -->
+<div class="stats-band">
+  <table>
+    <tr>
+      <td>
+        <span class="stat-number">${trip.durationDays}</span>
+        <span class="stat-label">Days</span>
+      </td>
+      <td>
+        <span class="stat-number">${totalActivities}</span>
+        <span class="stat-label">Activities</span>
+      </td>
+      <td>
+        <span class="stat-number">${trip.hotels?.length || 0}</span>
+        <span class="stat-label">Hotels</span>
+      </td>
+      <td>
+        <span class="stat-number">${totalItems}</span>
+        <span class="stat-label">Pack Items</span>
+      </td>
+      <td>
+        <span class="stat-number">${fmt(Math.round(perDay))}</span>
+        <span class="stat-label">Per Day</span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══ BODY ══════════════════════════════════════════════ -->
+<div class="body">
+
+  <!-- ── ITINERARY ──────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-head">
+      <table class="section-head-row"><tr>
+        <td class="section-title">Itinerary</td>
+        <td class="section-sub">${trip.itinerary.length} days planned</td>
+      </tr></table>
+    </div>
+
+    ${trip.itinerary.map((day) => `
+      <div class="day-block">
+        <div class="day-header-row">
+          <span class="day-num-box">Day ${day.dayNumber}</span>
+          <span class="day-title">${esc(day.title || `Day ${day.dayNumber}`)}</span>
+        </div>
+        ${day.activities.map((act) => `
+          <div class="activity-item">
+            <div class="activity-dot"></div>
+            <div class="activity-top">
+              <span class="activity-cost">${fmt(act.estimatedCostINR)}</span>
+              <span class="activity-time-tag" style="background:${timeColor(act.timeOfDay)}">${timeLabel(act.timeOfDay)}</span>
+              <span class="activity-name">${esc(act.title)}</span>
             </div>
-
-            <!-- Packing List -->
-            ${trip.packingList?.length ? `
-              <div class="section">
-                <h2 class="section-title">🧳 Packing List</h2>
-                <div class="packing-grid">
-                  ${trip.packingList.map((item) => `
-                    <div class="packing-item">
-                      <div class="checkbox ${item.isPacked ? 'checked' : ''}"></div>
-                      <div class="name ${item.isPacked ? 'packed' : ''}">${item.item} ${item.quantity > 1 ? `x${item.quantity}` : ''}</div>
-                      <span class="category">${item.category}</span>
-                    </div>
-                  `).join('')}
-                </div>
-                <div style="margin-top: 12px; color: #64748b; font-size: 14px;">
-                  ✅ ${trip.packingList.filter((i) => i.isPacked).length} / ${trip.packingList.length} packed
-                </div>
-              </div>
-            ` : ''}
-
-            <!-- Footer -->
-            <div class="footer">
-              <p>Generated by TravelWave • ${new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
-              <p>Plan your own trip at ${process.env.FRONTEND_URL}</p>
+            ${act.description ? `<div class="activity-desc">${esc(act.description)}</div>` : ''}
+            <div class="activity-info">
+              ${act.location ? `<span>&#128205; ${esc(act.location)}</span>` : ''}
+              ${act.duration ? `<span>&#9201; ${esc(act.duration)}</span>` : ''}
             </div>
           </div>
-        </body>
-      </html>
-    `;
+        `).join('')}
+      </div>
+    `).join('')}
+  </div>
+
+  <!-- ── HOTELS ─────────────────────────────────────────── -->
+  ${trip.hotels?.length ? `
+    <div class="section">
+      <div class="section-head">
+        <table class="section-head-row"><tr>
+          <td class="section-title">Where to Stay</td>
+          <td class="section-sub">${trip.hotels.length} recommendation${trip.hotels.length > 1 ? 's' : ''}</td>
+        </tr></table>
+      </div>
+      <table class="hotels-table">
+        ${trip.hotels.map((h) => `
+          <tr>
+            <td>
+              <div class="hotel-name">${esc(h.name)}</div>
+              <div>
+                <span class="hotel-tier-dot" style="background:${tierColor(h.tier)}"></span>
+                <span class="hotel-tier-text" style="color:${tierColor(h.tier)}">${esc(h.tier || 'Standard')}</span>
+              </div>
+              ${h.location ? `<div class="hotel-detail">&#128205; ${esc(h.location)}${h.rating ? ` &nbsp;&bull;&nbsp; &#11088; ${esc(h.rating)}` : ''}</div>` : ''}
+              ${h.amenities?.length ? `<div class="hotel-amenities-line">${h.amenities.slice(0, 5).map((a) => esc(a)).join(' &nbsp;·&nbsp; ')}</div>` : ''}
+            </td>
+            <td>
+              <div class="hotel-price">${fmt(h.estimatedCostNightINR)}</div>
+              <span class="hotel-price-unit">per night</span>
+            </td>
+          </tr>
+        `).join('')}
+      </table>
+    </div>
+  ` : ''}
+
+  <!-- ── BUDGET ─────────────────────────────────────────── -->
+  <div class="section">
+    <div class="section-head">
+      <table class="section-head-row"><tr>
+        <td class="section-title">Budget Breakdown</td>
+        <td class="section-sub">All amounts in Indian Rupees</td>
+      </tr></table>
+    </div>
+    <table class="budget-table">
+      ${budgetRows.map(row => {
+            const pct = Math.round(((Number(row.value) || 0) / totalBudget) * 100);
+            return `
+        <tr>
+          <td class="budget-label">${esc(row.label)}</td>
+          <td class="budget-bar-cell">
+            <div class="budget-track">
+              <div class="budget-fill" style="width:${pct}%"></div>
+            </div>
+          </td>
+          <td class="budget-value">${fmt(row.value)}</td>
+        </tr>`;
+        }).join('')}
+      <tr class="budget-total-row">
+        <td colspan="2">
+          <span class="budget-total-label">Total Estimated Budget</span>
+          <span class="budget-total-amount">${fmt(trip.estimatedBudget.total)}</span>
+        </td>
+        <td class="budget-perday">
+          <span class="budget-perday-amount">${fmt(Math.round(perDay))}</span>
+          <span class="budget-perday-label">per day</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ── PACKING ────────────────────────────────────────── -->
+  ${trip.packingList?.length ? `
+    <div class="section">
+      <div class="section-head">
+        <table class="section-head-row"><tr>
+          <td class="section-title">Packing List</td>
+          <td class="section-sub">${packedItems} of ${totalItems} packed &nbsp;&bull;&nbsp; ${packPct}%</td>
+        </tr></table>
+      </div>
+      <div class="packing-track">
+        <div class="packing-fill" style="width:${packPct}%"></div>
+      </div>
+      <table class="packing-cols-table">
+        <tr>
+          ${(() => {
+            const half = Math.ceil(trip.packingList.length / 2);
+            const col1 = trip.packingList.slice(0, half);
+            const col2 = trip.packingList.slice(half);
+            const renderItem = (item) => `
+              <div class="packing-entry${item.isPacked ? ' packed' : ''}">
+                ${item.isPacked
+                ? `<span class="packing-check-done">&#10003;</span>`
+                : `<span class="packing-check-box"></span>`}
+                <span class="packing-cat-icon">${catIcon(item.category)}</span>
+                ${esc(item.item)}
+                ${item.quantity > 1 ? `<span class="packing-qty">&#215;${item.quantity}</span>` : ''}
+              </div>`;
+            return `<td>${col1.map(renderItem).join('')}</td><td>${col2.map(renderItem).join('')}</td>`;
+        })()}
+        </tr>
+      </table>
+    </div>
+  ` : ''}
+
+</div><!-- /body -->
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<div class="footer">
+  <table class="footer-table"><tr>
+    <td>
+      <span class="footer-brand">Travel<span>Wave</span></span>
+      &nbsp;&nbsp;AI-Powered Travel Planner
+    </td>
+    <td class="footer-right">
+      ${esc(trip.destination)} Itinerary &nbsp;&bull;&nbsp; Generated ${date}
+    </td>
+  </tr></table>
+</div>
+
+</body>
+</html>`;
         return new Promise((resolve, reject) => {
             const options = {
                 format: 'A4',
                 orientation: 'portrait',
-                border: {
-                    top: '20px',
-                    bottom: '20px',
-                    left: '20px',
-                    right: '20px',
-                },
-                quality: '75',
-                paginationOffset: 0,
-                header: {
-                    height: '0px',
-                },
-                footer: {
-                    height: '0px',
-                },
-                timeout: 60000,
+                border: { top: '0px', bottom: '0px', left: '0px', right: '0px' },
+                header: { height: '0px' },
+                footer: { height: '0px' },
+                timeout: 90000,
+                phantomArgs: [
+                    '--ignore-ssl-errors=yes',
+                    '--local-to-remote-url-access=yes',
+                    '--web-security=false',
+                ],
             };
-            html_pdf_1.default.create(html, options).toBuffer((err, buffer) => {
+            htmlPdf.create(html, options).toBuffer((err, buffer) => {
                 if (err) {
                     logger_1.logger.error('PDF generation error:', err);
                     reject(new errors_1.AppError('Failed to generate PDF', 500));
                 }
                 else {
+                    logger_1.logger.info(`✅ PDF generated (${buffer.length} bytes)`);
                     resolve(buffer);
                 }
             });
         });
+    }
+    getLogoDataUri() {
+        if (this.logoDataUri !== undefined)
+            return this.logoDataUri;
+        const logoPaths = [
+            path_1.default.resolve(process.cwd(), '..', 'client', 'src', 'assets', 'TravelWave.png'),
+            path_1.default.resolve(process.cwd(), '..', 'client', 'src', 'assets', 'logo.png'),
+            path_1.default.resolve(process.cwd(), '..', 'client', 'public', 'logo.png'),
+        ];
+        for (const logoPath of logoPaths) {
+            try {
+                if (fs_1.default.existsSync(logoPath)) {
+                    const logo = fs_1.default.readFileSync(logoPath);
+                    this.logoDataUri = `data:image/png;base64,${logo.toString('base64')}`;
+                    logger_1.logger.info('✅ Logo found for PDF:', logoPath);
+                    return this.logoDataUri;
+                }
+            }
+            catch {
+            }
+        }
+        logger_1.logger.warn('⚠️  No logo found for PDF, using text-only brand');
+        this.logoDataUri = '';
+        return this.logoDataUri;
+    }
+    async generateTripPDFBuffer(trip) {
+        return this.generateTripPDF(trip);
     }
 }
 exports.PDFService = PDFService;

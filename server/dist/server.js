@@ -40,7 +40,7 @@ app.use('/api/auth', auth_routes_1.default);
 app.use('/api/trips', trip_routes_1.default);
 app.use('/api/export', export_routes_1.default);
 app.get('/api/shared/:token', (0, asyncHandler_1.asyncHandler)(tripController.getSharedTrip));
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
     res.status(200).json({
         status: 'OK',
         timestamp: new Date().toISOString(),
@@ -49,7 +49,7 @@ app.get('/health', (req, res) => {
     });
 });
 app.use('/api/auth', auth_routes_1.default);
-app.use((req, res) => {
+app.use((_req, res) => {
     res.status(404).json({
         success: false,
         error: {

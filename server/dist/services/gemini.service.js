@@ -43,20 +43,20 @@ class GeminiService {
     getSafetySettings() {
         return [
             {
-                category: 'HARM_CATEGORY_HARASSMENT',
-                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+                category: generative_ai_1.HarmCategory.HARM_CATEGORY_HARASSMENT,
+                threshold: generative_ai_1.HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             },
             {
-                category: 'HARM_CATEGORY_HATE_SPEECH',
-                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+                category: generative_ai_1.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                threshold: generative_ai_1.HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             },
             {
-                category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+                category: generative_ai_1.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                threshold: generative_ai_1.HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             },
             {
-                category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-                threshold: 'BLOCK_MEDIUM_AND_ABOVE',
+                category: generative_ai_1.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                threshold: generative_ai_1.HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
             },
         ];
     }
