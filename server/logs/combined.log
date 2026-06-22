@@ -1190,3 +1190,10 @@
 2026-06-22 20:00:23 [INFO]: GET /api/trips 304 - 41ms 
 2026-06-22 20:00:24 [INFO]: GET /api/trips 304 - 40ms 
 2026-06-22 20:00:24 [INFO]: GET /api/trips 304 - 48ms 
+2026-06-22 20:01:01 [INFO]: Gemini API service initialized 
+2026-06-22 20:01:01 [INFO]: MongoDB connected successfully 
+2026-06-22 20:01:03 [INFO]: Email service configured successfully 
+2026-06-22 20:11:13 [INFO]: GET /api/auth/me 304 - 45ms 
+2026-06-22 20:11:13 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 20:11:13 [INFO]: GET /api/trips 304 - 126ms 
+2026-06-22 20:11:13 [INFO]: GET /api/trips 304 - 46ms 
