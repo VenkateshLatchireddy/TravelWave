@@ -44,7 +44,7 @@ export const packingItemSchema = z.object({
   notes: z.string().optional(),
 });
 
-const parseDate = z.preprocess((value) => {
+const parseDate = z.preprocess((value: unknown) => {
   if (typeof value === 'string' && value.length > 0) {
     const date = new Date(value);
     return isNaN(date.getTime()) ? undefined : date;

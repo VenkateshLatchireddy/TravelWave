@@ -1222,3 +1222,15 @@
 2026-06-22 20:28:46 [INFO]: GET /api/auth/me 304 - 17ms 
 2026-06-22 20:28:46 [INFO]: GET /api/trips 304 - 55ms 
 2026-06-22 20:28:46 [INFO]: GET /api/trips 304 - 44ms 
+2026-06-22 20:28:52 [INFO]: Gemini API service initialized 
+2026-06-22 20:28:53 [INFO]: MongoDB connected successfully 
+2026-06-22 20:28:54 [INFO]: Email service configured successfully 
+2026-06-22 20:35:00 [INFO]: Gemini API service initialized 
+2026-06-22 20:35:00 [INFO]: MongoDB connected successfully 
+2026-06-22 20:35:02 [INFO]: Email service configured successfully 
+2026-06-22 20:35:10 [INFO]: Gemini API service initialized 
+2026-06-22 20:35:12 [INFO]: Email service configured successfully 
+2026-06-22 20:35:13 [INFO]: MongoDB connected successfully 
+2026-06-22 20:35:39 [INFO]: Gemini API service initialized 
+2026-06-22 20:35:40 [INFO]: MongoDB connected successfully 
+2026-06-22 20:35:42 [INFO]: Email service configured successfully 
