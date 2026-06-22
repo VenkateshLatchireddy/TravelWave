@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateRequest = void 0;
-const zod_1 = require("zod");
+const zod_1 = __importDefault(require("zod"));
 const errors_1 = require("../utils/errors");
 const validateRequest = (schema) => {
     return async (req, _res, next) => {
@@ -11,8 +14,9 @@ const validateRequest = (schema) => {
             next();
         }
         catch (error) {
-            if (error instanceof zod_1.ZodError) {
-                const errors = error.errors.map(err => ({
+            if (error instanceof zod_1.default.ZodError) {
+                const zErr = error;
+                const errors = zErr.errors.map((err) => ({
                     field: err.path.join('.'),
                     message: err.message,
                 }));
