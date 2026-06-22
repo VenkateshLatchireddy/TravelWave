@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "types": ["node", "jest"],
     "noUnusedLocals": true,
@@ -21,7 +21,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "ignoreDeprecations": "5.0",
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
