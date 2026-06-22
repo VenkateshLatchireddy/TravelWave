@@ -72,13 +72,6 @@ export class GeminiService {
     delay: number = this.retryConfig.initialDelay
   ): Promise<IAIResponse | any[]> {
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
-      if (!apiKey) {
-        console.error('GEMINI_API_KEY is not set in environment variables');
-        throw new AppError('GEMINI_API_KEY is not configured on server', 500);
-      }
-
-      console.log('fetchWithRetry: Calling Gemini API with key:', apiKey.substring(0, 10) + '...');
       const result = await this.model.generateContent(prompt);
       const response = await result.response;
       const text = response.text();

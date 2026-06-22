@@ -22,22 +22,12 @@ export class TripController {
 
   public generateTrip = async (req: AuthRequest, res: Response): Promise<void> => {
     try {
-      console.log('=== TRIP GENERATION STARTED ===');
-      console.log('User ID:', req.user?.userId);
-      console.log('Request body:', req.body);
-
       const { destination, durationDays, budgetTier, interests, travelDates } = req.body;
       const userId = req.user!.userId;
-
-      if (!process.env.GEMINI_API_KEY) {
-        console.error('GEMINI_API_KEY is missing!');
-        throw new Error('AI service is not configured');
-      }
 
       logger.info(`Generating trip for user ${userId} to ${destination}`);
 
       // Generate trip plan using AI
-      console.log('Calling Gemini service to generate trip plan...');
       const aiResponse = await this.geminiService.generateTripPlan({
         destination,
         durationDays,
@@ -45,7 +35,6 @@ export class TripController {
         interests: interests || [],
         travelDates,
       });
-      console.log('AI response received:', JSON.stringify(aiResponse).substring(0, 200));
 
       // Create trip document
       const trip = new Trip({
@@ -72,7 +61,6 @@ export class TripController {
         message: 'Trip generated successfully',
       });
     } catch (error) {
-      console.error('Trip generation error:', error);
       logger.error('Trip generation error:', error);
       throw error;
     }
