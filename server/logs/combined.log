@@ -1197,3 +1197,28 @@
 2026-06-22 20:11:13 [INFO]: GET /api/auth/me 304 - 3ms 
 2026-06-22 20:11:13 [INFO]: GET /api/trips 304 - 126ms 
 2026-06-22 20:11:13 [INFO]: GET /api/trips 304 - 46ms 
+2026-06-22 20:12:44 [INFO]: Gemini API service initialized 
+2026-06-22 20:12:45 [INFO]: MongoDB connected successfully 
+2026-06-22 20:12:46 [INFO]: Email service configured successfully 
+2026-06-22 20:14:36 [INFO]: GET /api/auth/me 304 - 12ms 
+2026-06-22 20:14:36 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 20:14:36 [INFO]: GET /api/trips 304 - 84ms 
+2026-06-22 20:14:36 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-22 20:14:38 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 20:14:38 [INFO]: GET /api/auth/me 304 - 8ms 
+2026-06-22 20:14:39 [INFO]: GET /api/trips 304 - 426ms 
+2026-06-22 20:14:39 [INFO]: GET /api/trips 304 - 166ms 
+2026-06-22 20:28:29 [INFO]: Gemini API service initialized 
+2026-06-22 20:28:30 [INFO]: MongoDB connected successfully 
+2026-06-22 20:28:31 [INFO]: Email service configured successfully 
+2026-06-22 20:28:43 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-22 20:28:43 [INFO]: GET /api/auth/me 401 - 3ms 
+2026-06-22 20:28:43 [INFO]: POST /api/auth/refresh-token 200 - 51ms 
+2026-06-22 20:28:43 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 20:28:43 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 20:28:44 [INFO]: GET /api/trips 304 - 188ms 
+2026-06-22 20:28:44 [INFO]: GET /api/trips 304 - 193ms 
+2026-06-22 20:28:46 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 20:28:46 [INFO]: GET /api/auth/me 304 - 17ms 
+2026-06-22 20:28:46 [INFO]: GET /api/trips 304 - 55ms 
+2026-06-22 20:28:46 [INFO]: GET /api/trips 304 - 44ms 
