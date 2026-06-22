@@ -91,8 +91,21 @@ npm run build   # build production assets
 
 Deployment (high level)
 - Frontend: Deploy to Vercel / Netlify by pointing to the `client` folder and setting the build command `npm run build`.
-- Backend: Deploy to a Node host (e.g. Heroku, Render, DigitalOcean App Platform) and set environment variables. Use `npm run build` and `npm run start` in production.
-- MongoDB: Use a managed Mongo provider (MongoDB Atlas) and supply `MONGO_URI` to the app.
+- Backend: Deploy to a Node host (Render, Heroku, DigitalOcean App Platform, etc.) and set environment variables. Use `npm run build` and `npm run start` in production.
+- MongoDB: Use a managed Mongo provider (MongoDB Atlas) and supply `MONGODB_URI` to the app.
+
+Production deployment details
+- Frontend production URL: `https://travel-wave-eta.vercel.app/login`
+- Backend production URL: `https://travelwave.onrender.com`
+- In Vercel, set Root Directory to `client`, Install Command to `npm install`, Build Command to `npm run build`, Output Directory to `dist`.
+- In Vercel environment variables, set:
+  - `VITE_API_URL=https://travelwave.onrender.com`
+  - `VITE_APP_NAME=TravelWave`
+- In Render environment variables for the backend, set:
+  - `FRONTEND_URL=https://travel-wave-eta.vercel.app`
+  - `MONGODB_URI` to your MongoDB connection string
+  - `JWT_SECRET`, `JWT_REFRESH_SECRET`, `GEMINI_API_KEY`, `SMTP_*` values, etc.
+- Local development works with the defaults: server on `http://localhost:5000`, client on `http://localhost:5173`.
 
 ## High-level Architecture
 
