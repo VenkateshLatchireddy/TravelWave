@@ -6,7 +6,7 @@
 ![TraveWave](https://raw.githubusercontent.com/VenkateshLatchireddy/TravelWave/main/client/src/assets/s4.png)
 ![TraveWave](https://raw.githubusercontent.com/VenkateshLatchireddy/TravelWave/main/client/src/assets/s5.png)
 ![TraveWave](https://raw.githubusercontent.com/VenkateshLatchireddy/TravelWave/main/client/src/assets/s6.png)
-![TraveWave](https://raw.githubusercontent.com/VenkateshLatchireddy/TravelWave/main/client/src/assets/s7.png)
+
 
 ## Project Overview
 
