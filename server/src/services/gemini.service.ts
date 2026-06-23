@@ -7,9 +7,9 @@ export class GeminiService {
   private static instance: GeminiService;
   private model: GenerativeModel;
   private readonly retryConfig = {
-    maxRetries: 5,
+    maxRetries: 3,
     initialDelay: 1000,
-    maxDelay: 16000,
+    maxDelay: 8000,
   };
 
   private constructor() {
@@ -33,6 +33,11 @@ export class GeminiService {
       GeminiService.instance = new GeminiService();
     }
     return GeminiService.instance;
+  }
+
+  /** Call this if the API key changes at runtime to force re-initialization. */
+  public static resetInstance(): void {
+    GeminiService.instance = new GeminiService();
   }
 
   private getGenerationConfig(): GenerationConfig {
@@ -107,8 +112,29 @@ export class GeminiService {
   }
 
   private shouldRetry(error: any): boolean {
-    // Retry on rate limit or server errors
-    return error.status === 429 || error.status >= 500;
+    // Only retry on 5xx server errors — never on auth/quota/not-found
+    return typeof error.status === 'number' && error.status >= 500 && error.status !== 503;
+  }
+
+  /** Converts a raw Gemini API error into a user-friendly message. */
+  private classifyError(error: any): string {
+    const status = error?.status;
+    if (status === 401) {
+      return 'Invalid Gemini API key. Please update GEMINI_API_KEY in your .env file.';
+    }
+    if (status === 403) {
+      return 'Gemini API key does not have permission. Check your Google AI Studio project.';
+    }
+    if (status === 404) {
+      return `Gemini model "${process.env.GEMINI_MODEL}" not found. Update GEMINI_MODEL in your .env file (try gemini-2.0-flash).`;
+    }
+    if (status === 429) {
+      return 'Gemini API quota exceeded. Please wait or upgrade your API plan at https://ai.google.dev/gemini-api/docs/rate-limits';
+    }
+    if (status === 503) {
+      return 'Gemini AI service is temporarily overloaded. Please try again in a moment.';
+    }
+    return 'AI service error. Please try again.';
   }
 
   private normalizeJsonResponse(text: string): string {
@@ -212,9 +238,11 @@ export class GeminiService {
         throw new AppError('Invalid trip plan response from AI service', 500);
       }
       return response;
-    } catch (error) {
+    } catch (error: any) {
       logger.error('Failed to generate trip plan:', error);
-      throw new AppError('Failed to generate trip plan. Please try again.', 500);
+      // Re-throw AppErrors as-is (already classified)
+      if (error instanceof AppError) throw error;
+      throw new AppError(this.classifyError(error), 500);
     }
   }
 
@@ -232,9 +260,10 @@ export class GeminiService {
         throw new AppError('Invalid day regeneration response from AI service', 500);
       }
       return response;
-    } catch (error) {
+    } catch (error: any) {
       logger.error('Failed to regenerate day:', error);
-      throw new AppError('Failed to regenerate day. Please try again.', 500);
+      if (error instanceof AppError) throw error;
+      throw new AppError(this.classifyError(error), 500);
     }
   }
 
@@ -243,11 +272,22 @@ export class GeminiService {
     logger.info('Generating packing list');
     
     try {
-      const response = await this.fetchWithRetry(prompt);
-      return Array.isArray(response) ? response : response.packingList || [];
-    } catch (error) {
+      // Use fewer retries for packing list to stay within client timeout
+      const response = await this.fetchWithRetry(prompt, 2, 1000);
+      const items = Array.isArray(response) ? response : (response as any).packingList || [];
+      return items;
+    } catch (error: any) {
       logger.error('Failed to generate packing list:', error);
-      throw new AppError('Failed to generate packing list. Please try again.', 500);
+      const isQuotaExceeded = error?.status === 429;
+      const isOverloaded = error?.status === 503;
+      throw new AppError(
+        isQuotaExceeded
+          ? 'AI daily quota exceeded. Please try again tomorrow or upgrade your API plan.'
+          : isOverloaded
+          ? 'AI service is busy. Please try again in a moment.'
+          : 'Failed to generate packing list. Please try again.',
+        500
+      );
     }
   }
 

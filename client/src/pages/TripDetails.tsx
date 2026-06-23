@@ -242,13 +242,18 @@ export const TripDetails: React.FC = () => {
   const handleRegeneratePackingList = async () => {
     setIsRegeneratingPacking(true);
     try {
-      const response = await api.post(`/api/trips/${id}/packing/regenerate`);
+      // AI call with retries can take >30s — use a longer timeout
+      const response = await api.post(`/api/trips/${id}/packing/regenerate`, {}, {
+        timeout: 120000, // 2 minutes
+      });
       if (response.success) {
         setTrip(response.data);
-        toast.success('Packing list regenerated with weather considerations');
+        toast.success('Packing list regenerated with weather considerations!');
       }
-    } catch (error) {
-      toast.error('Failed to regenerate packing list');
+    } catch (error: unknown) {
+      const msg =
+        error instanceof Error ? error.message : 'Failed to regenerate packing list';
+      toast.error(msg);
     } finally {
       setIsRegeneratingPacking(false);
     }
