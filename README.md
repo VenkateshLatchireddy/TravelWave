@@ -1,5 +1,5 @@
 # TravelWave
-
+![TraveWave](https://raw.githubusercontent.com/VenkateshLatchireddy/TravelWave/main/client/src/assets/s1.png)
 ## Project Overview
 
 TravelWave is an AI-powered travel planning application that generates personalized trip itineraries, budgets, hotel recommendations, and packing lists. The system combines a React + Vite frontend with an Express + TypeScript backend that leverages a generative AI model (Google Gemini) to build rich, contextual itineraries and smart packing suggestions. Users can create, edit, share, export, and email trip itineraries as PDFs or JSON.
