@@ -1579,3 +1579,29 @@ Please retry in 40.829756304s. [{"@type":"type.googleapis.com/google.rpc.Help","
 2026-06-23 08:51:33 [ERROR]: Login error: Invalid email or password {"statusCode":401,"isOperational":true,"code":"AUTHENTICATION_ERROR","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)"}
 2026-06-23 08:51:33 [ERROR]: Error occurred: {"error":"Invalid email or password","stack":"Error: Invalid email or password\n    at login (C:\\Desktop\\TravelWave\\server\\src\\controllers\\auth.controller.ts:99:15)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","path":"/api/auth/login","method":"POST","ip":"::1"}
 2026-06-23 08:51:33 [INFO]: POST /api/auth/login 401 - 7ms 
+2026-06-23 08:56:40 [INFO]: Gemini API service initialized 
+2026-06-23 08:56:41 [INFO]: MongoDB connected successfully 
+2026-06-23 08:56:42 [INFO]: Email service configured successfully 
+2026-06-23 08:56:55 [INFO]: GET /api/auth/me 401 - 25ms 
+2026-06-23 08:56:55 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-23 08:56:55 [INFO]: POST /api/auth/refresh-token 200 - 112ms 
+2026-06-23 08:56:55 [INFO]: GET /api/auth/me 304 - 7ms 
+2026-06-23 08:56:55 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-23 08:56:57 [INFO]: POST /api/auth/login 200 - 851ms 
+2026-06-23 08:56:58 [INFO]: GET /api/trips 304 - 177ms 
+2026-06-23 08:56:58 [INFO]: GET /api/trips 304 - 102ms 
+2026-06-23 08:57:01 [INFO]: GET /api/trips/6a39f33b8494bc57fb5fc6fa 200 - 210ms 
+2026-06-23 08:57:02 [INFO]: GET /api/trips/6a39f33b8494bc57fb5fc6fa 200 - 317ms 
+2026-06-23 08:57:06 [INFO]: Generating packing list 
+2026-06-23 08:57:24 [INFO]: POST /api/trips/6a39f33b8494bc57fb5fc6fa/packing/regenerate 200 - 18851ms 
+2026-06-23 08:57:31 [INFO]: GET /api/trips 200 - 76ms 
+2026-06-23 08:57:31 [INFO]: GET /api/trips 304 - 154ms 
+2026-06-23 08:57:34 [INFO]: DELETE /api/trips/6a39f33b8494bc57fb5fc6fa 200 - 81ms 
+2026-06-23 08:57:34 [INFO]: GET /api/trips 200 - 64ms 
+2026-06-23 08:57:49 [INFO]: Generating trip for user 6a39f2f58494bc57fb5fc6f5 to Delhi 
+2026-06-23 08:57:49 [INFO]: Generating trip plan with prompt length: 
+2026-06-23 08:58:11 [INFO]: POST /api/trips/generate 201 - 22463ms 
+2026-06-23 08:58:11 [INFO]: GET /api/trips/6a39fd4b4003b3239cebe7b9 200 - 176ms 
+2026-06-23 08:58:12 [INFO]: GET /api/trips/6a39fd4b4003b3239cebe7b9 200 - 180ms 
+2026-06-23 08:58:17 [INFO]: GET /api/trips 200 - 83ms 
+2026-06-23 08:58:17 [INFO]: GET /api/trips 304 - 97ms 
