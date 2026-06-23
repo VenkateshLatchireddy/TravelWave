@@ -1398,3 +1398,49 @@
 2026-06-22 23:11:46 [INFO]: Gemini API service initialized 
 2026-06-22 23:11:46 [INFO]: MongoDB connected successfully 
 2026-06-22 23:11:51 [INFO]: Email service configured successfully 
+2026-06-22 23:13:24 [INFO]: GET /api/auth/me 304 - 17ms 
+2026-06-22 23:13:24 [INFO]: GET /api/auth/me 304 - 4ms 
+2026-06-22 23:13:24 [INFO]: GET /api/trips 304 - 62ms 
+2026-06-22 23:13:24 [INFO]: GET /api/trips 304 - 46ms 
+2026-06-22 23:13:30 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-22 23:13:30 [INFO]: GET /api/auth/me 304 - 8ms 
+2026-06-22 23:13:30 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 23:13:30 [INFO]: GET /api/trips 304 - 33ms 
+2026-06-22 23:13:36 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 23:13:36 [INFO]: GET /api/trips 304 - 39ms 
+2026-06-22 23:13:50 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 23:13:50 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-22 23:13:53 [INFO]: GET /api/trips/6a39725bb8fac6569d5be160 200 - 83ms 
+2026-06-22 23:13:53 [INFO]: GET /api/trips/6a39725bb8fac6569d5be160 200 - 72ms 
+2026-06-22 23:14:12 [INFO]: Regenerating day: {"dayNumber":1,"userFeedback":"remove this Breakfast at Parathe Wali Gali & Old Delhi Exploration"}
+2026-06-22 23:14:20 [ERROR]: Gemini API error: {"error":"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.","retries":5}
+2026-06-22 23:14:27 [INFO]: PUT /api/trips/6a39725bb8fac6569d5be160/regenerate-day 200 - 14596ms 
+2026-06-22 23:14:38 [INFO]: Generating packing list 
+2026-06-22 23:14:54 [INFO]: POST /api/trips/6a39725bb8fac6569d5be160/packing/regenerate 200 - 16224ms 
+2026-06-22 23:15:03 [INFO]: GET /api/trips 200 - 39ms 
+2026-06-22 23:15:03 [INFO]: GET /api/trips 304 - 36ms 
+2026-06-22 23:15:11 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 23:15:11 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-22 23:15:14 [INFO]: GET /api/trips 304 - 34ms 
+2026-06-22 23:15:14 [INFO]: GET /api/trips 304 - 51ms 
+2026-06-22 23:15:25 [INFO]: POST /api/auth/login 200 - 422ms 
+2026-06-22 23:15:25 [INFO]: GET /api/trips 304 - 48ms 
+2026-06-22 23:15:26 [INFO]: GET /api/trips 304 - 55ms 
+2026-06-22 23:15:38 [INFO]: GET /api/trips 304 - 40ms 
+2026-06-22 23:15:38 [INFO]: GET /api/trips 304 - 44ms 
+2026-06-22 23:17:04 [INFO]: POST /api/auth/login 200 - 397ms 
+2026-06-22 23:17:05 [INFO]: GET /api/trips 200 - 32ms 
+2026-06-22 23:17:05 [INFO]: GET /api/trips 304 - 32ms 
+2026-06-22 23:17:47 [INFO]: GET /api/auth/me 304 - 5ms 
+2026-06-22 23:17:47 [INFO]: GET /api/auth/me 304 - 2ms 
+2026-06-22 23:17:47 [INFO]: GET /api/trips 200 - 35ms 
+2026-06-22 23:17:47 [INFO]: GET /api/trips 304 - 35ms 
+2026-06-23 08:03:47 [WARN]: MongoDB disconnected 
+2026-06-23 08:03:47 [INFO]: MongoDB reconnected 
+2026-06-23 08:04:19 [INFO]: GET /api/auth/me 401 - 12ms 
+2026-06-23 08:04:19 [INFO]: GET /api/auth/me 401 - 13ms 
+2026-06-23 08:04:20 [INFO]: POST /api/auth/refresh-token 200 - 1035ms 
+2026-06-23 08:04:20 [INFO]: GET /api/auth/me 304 - 3ms 
+2026-06-23 08:04:20 [INFO]: GET /api/auth/me 304 - 6ms 
+2026-06-23 08:04:21 [INFO]: GET /api/trips 304 - 1057ms 
+2026-06-23 08:04:22 [INFO]: GET /api/trips 304 - 410ms 
